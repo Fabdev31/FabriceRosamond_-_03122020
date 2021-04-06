@@ -1,0 +1,12 @@
+button
+{
+    border-radius: 25px;
+    @include backgroundmaincolor($colour-primary);
+    background: linear-gradient($colour-secondary,$colour-primary);
+    padding: 2.5%;
+    color: $colour-white;
+    font-family: $font-main;
+    border-style: none;
+    margin-bottom: 10%;
+}
+
