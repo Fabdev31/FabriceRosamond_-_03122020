@@ -1,0 +1,19 @@
+{
+  "name": "projet3_git_test",
+  "version": "1.0.0",
+  "description": "Projet ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabdev31/PROJET3.git"
+  },
+  "author": "Fabrice ROSAMOND",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabdev31/PROJET3/issues"
+  },
+  "homepage": "https://github.com/Fabdev31/PROJET3#readme"
+}
