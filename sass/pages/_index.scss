@@ -1,6 +1,6 @@
+@import "../utils/mixins";
 @import "../layout/footer";
 @import "../components/buttons";
-@import "../utils/mixins";
 @import "../base/typography";
 
 img{
@@ -21,36 +21,35 @@ header
     border-radius: 0%;
     }
 
-    img{
-        width: 100%;
-        object-fit: contain;
-        border-radius: 25px 25px 0px 0px;
+img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 25px 25px 0px 0px;
+}
+    
+#logo-header
+{
+    border-radius: 0px;
+}
+    
+#section-recherche {
+    font-size: map-get($font-size,section-recherche);
+    @include backgroundmaincolor;
+    font-family: 'Roboto';
+    text-align: center;
+    padding-bottom: 8%;
+    h1{
+        width: 80%;
+        margin-left: 10%;
+        font-weight: 900;
     }
     
-    #logo-header
-    {
-        border-radius: 0px;
+.sous-titre{
+    width: 90%;
+    margin-left: 5%;
+    font-weight: 200;  
     }
-    
-    #section-recherche {
-        font-size: map-get($font-size,section-recherche);
-        @include backgroundmaincolor;
-        font-family: 'Roboto';
-        text-align: center;
-        padding-bottom: 8%;
-        h1{
-            width: 80%;
-            margin-left: 10%;
-            font-weight: 900;
-        }
-    
-        .sous-titre
-        {
-            width: 90%;
-            margin-left: 5%;
-            font-weight: 200;  
-        }
-    }
+}
     
     .section-recherche{
         @include backgroundmaincolor($color-deep-grey);
@@ -115,28 +114,44 @@ header
         @include backgroundmaincolor;
         margin-top: map-get($margin-top, section);
         padding-top: 5%;
-        padding-bottom: 5%;
-        
+        padding-bottom: 5%;        
     }
     
-    .icone-coeur
-    {
-        outline: aqua 2px solid;
-        cursor: pointer;
-        background: linear-gradient($colour-secondary,$colour-primary);
+    .icone-coeur-vide{
         font-size: 1.3em;
         font-weight: 200;
-        padding: -1rem;
-        }
-    
-        
-    .icone-coeurvide
-    {
-        color:blueviolet;
-        outline: aqua 2px solid;
+        margin: 0%;
+
     }
+    .fa-blabla
+    {
+        background: linear-gradient($colour-secondary, $colour-primary);
+    }
+
+    .couleur-fond
+    {
+        background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+    }
+    .icone-coeur-plein{
+        font-size: 1rem;
+        cursor: pointer;
+        background: pink;
+	background: -webkit-radial-gradient(33% 100% circle, #515ECF 4%, #9B36B7 30%, #D92E7F 62%, #F15245 85%, #FED373);
+	background: radial-gradient(circle at 33% 100%, #ff3be7 4%, #ff3be7 28%, #03ffe8 62%, #F15245 85%, #FED373);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+    }
+
+.container
+{
+    border-radius: 25px;
+    width:30%;
+    height:150px;
+    background:linear-gradient($colour-primary,$colour-secondary);
+    background: scroll;
+}
     
-        
     .vignette-article-differentes
     {
         @include backgroundmaincolor($colour-white);
@@ -146,7 +161,6 @@ header
     #photo-plat-restaurant
     {
      width: 100%;
-        
     }
     
     .texte-sur-image
