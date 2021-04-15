@@ -62,29 +62,27 @@ img{
     font-family: $font-main;
     font-weight:$font-weight;
     margin-top: map-get($margin-top,section);
-    }
-    h2
-    {
-        margin-left: map-get($margin-left,h2);
-        width: 90%;
-    }
-    .vignette-menu-nav
-    {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content:flex-start;
-        width: 80%;
-        border-radius: 15px;
-        position: relative;
-        margin-left: 10%;
-        margin-bottom: 5%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        @include backgroundmaincolor;
-        font-size: map-get($font-size,vignette-menu-nav);
+}
+h2{
+    margin-left: map-get($margin-left,h2);
+    width: 90%;
+}
+.vignette-menu-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    width: 80%;
+    border-radius: 15px;
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    @include backgroundmaincolor;
+    font-size: map-get($font-size,vignette-menu-nav);
     
-        .numero-vignette{
+    .numero-vignette{
         position: absolute;
         left: -1rem;
         border-radius: 25px;
@@ -93,57 +91,47 @@ img{
         color: $colour-white;
         font-size: 0.8em;
     }
-    }
-    .element-vignette
-    {
-        margin-left: map-get($margin-left, element-vignette);
-        color: grey;
-    }
-    .texte-vignette
-    {
-        margin-left: map-get($margin-left, texte-vignette)
-    }
-    
-    
-    #section-principale
-    {
-        font-family: $font-main;
-        font-weight: $font-weight;
-        @include backgroundmaincolor;
-        margin-top: map-get($margin-top, section);
-        padding-top: 5%;
-        padding-bottom: 5%;        
-    }
-    
-    
-    
-    .vignette-article-differentes
-    {
-        @include backgroundmaincolor($colour-white);
-        border-radius: map-get($border-radius , vignette-article-differentes );
-        position: relative;
-    }
-    #photo-plat-restaurant
-    {
-     width: 100%;
-    }
-    
-    .texte-sur-image
-    {
-        position: absolute;
-        top:-2%;
-        right: 5%;
-        padding: 2%;
-        @include backgroundmaincolor($colour-tertiary);
-        color:$color-text-nouveau;
-    }
-    
-    
-    figure{
-        @include backgroundmaincolor($colour-white);
-        border-radius: map-get($border-radius, figure );
+}
+.element-vignette{
+    margin-left: map-get($margin-left, element-vignette);
+    color: grey;
+}
+.texte-vignette{
+    margin-left: map-get($margin-left, texte-vignette)
+}
 
-        figcaption{
+#section-principale{
+    font-family: $font-main;
+    font-weight: $font-weight;
+    @include backgroundmaincolor;
+    margin-top: map-get($margin-top, section);
+    padding-top: 5%;
+    padding-bottom: 5%;        
+}
+    
+.vignette-article-differentes{
+    @include backgroundmaincolor($colour-white);
+    border-radius: map-get($border-radius , vignette-article-differentes );
+    position: relative;
+}
+#photo-plat-restaurant{
+    width: 100%;
+}
+    
+.texte-sur-image{
+    position: absolute;
+    top:-2%;
+    right: 5%;
+    padding: 2%;
+    @include backgroundmaincolor($colour-tertiary);
+    color:$color-text-nouveau;
+    }   
+    
+figure{
+    @include backgroundmaincolor($colour-white);
+    border-radius: map-get($border-radius, figure );
+
+    figcaption{
         margin-left: map-get($margin-left, h2 );
         width: 85%;
         display: flex;
@@ -154,8 +142,8 @@ img{
         flex-wrap: wrap;
         
         h3{
-        margin-top: 2%;
-        margin-bottom: 1%;
+            margin-top: 2%;
+            margin-bottom: 1%;
         }
         .placement-coeurs{
             position: relative;
@@ -178,20 +166,15 @@ img{
                 }
                 }
             .icone-coeur-vide{
-            font-size: 1.3em;
-            font-weight: 200;
-            margin: 0%;
+                font-size: 1.3em;
+                font-weight: 200;
+                margin: 0%;
             }   
-
         }
-        
-
-        
-
         .positionnement-text-vignette{
-        font-weight: $font-weight-normal;
-        width: 100%;
-        margin-top: 1%;
+            font-weight: $font-weight-normal;
+            width: 100%;
+            margin-top: 1%;
         }
     }
 }
