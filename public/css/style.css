@@ -196,10 +196,10 @@ figure figcaption h3 {
   margin-bottom: 1%;
 }
 figure figcaption .placement-coeurs {
+  background: transparent;
   position: relative;
 }
 figure figcaption .placement-coeurs .icone-coeur-plein {
-  background: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.3rem;
@@ -285,6 +285,31 @@ h2 {
 #presentation-restaurant .presentation-restaurant h1 {
   margin-left: 5%;
 }
+#presentation-restaurant .presentation-restaurant .placement-coeurs {
+  position: relative;
+}
+#presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-plein {
+  background: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-plein:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-vide {
+  font-size: 1.3em;
+  font-weight: 200;
+  margin: 0%;
+}
 
 #section-menu {
   font-family: "Roboto";
@@ -293,7 +318,7 @@ h2 {
   background-color: #f6f6f6;
   padding-top: 20%;
 }
-#section-menu .ensemble-vignettes-restaurants {
+#section-menu .vignettes-entrees {
   margin-top: 16%;
   display: flex;
   flex-direction: column;
@@ -301,10 +326,13 @@ h2 {
   align-content: center;
   align-items: center;
 }
-#section-menu .ensemble-vignettes-restaurants .positionnement-titre-article {
+#section-menu .vignettes-entrees__apparition {
+  animation: entrees-apparitions 1500ms;
+}
+#section-menu .vignettes-entrees .positionnement-titre-article {
   font-weight: 300;
 }
-#section-menu .ensemble-vignettes-restaurants .vignettes-menu {
+#section-menu .vignettes-entrees .vignettes-menu {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -315,23 +343,34 @@ h2 {
   margin-bottom: 5%;
   width: 95%;
 }
-#section-menu .ensemble-vignettes-restaurants .vignettes-menu h3 {
+#section-menu .vignettes-entrees .vignettes-menu h3 {
   width: 100%;
   margin-left: 5%;
 }
-#section-menu .ensemble-vignettes-restaurants .vignettes-menu .texte-vignette {
+#section-menu .vignettes-entrees .vignettes-menu .texte-vignette {
   margin-left: 5%;
 }
-#section-menu .ensemble-vignettes-restaurants .vignettes-menu .dernier-element-vignette {
+#section-menu .vignettes-entrees .vignettes-menu .dernier-element-vignette {
   margin-right: 5%;
 }
-#section-menu .ensemble-vignettes-restaurants .vignettes-menu .fa-check-circle {
+#section-menu .vignettes-entrees .vignettes-menu .fa-check-circle {
   position: absolute;
   right: 2rem;
   top: 2rem;
   visibility: hidden;
 }
 
+@keyframes entrees-apparitions {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   width: 100%;
   background-color: #323232;

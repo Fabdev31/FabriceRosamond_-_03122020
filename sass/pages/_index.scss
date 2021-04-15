@@ -146,9 +146,10 @@ figure{
             margin-bottom: 1%;
         }
         .placement-coeurs{
+            background: transparent;
             position: relative;
             .icone-coeur-plein{
-                background: transparent;
+                
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 1.3rem;
@@ -158,7 +159,6 @@ figure{
                 right: 0;
                 bottom: 0;
                 left:0;
-                
                 &:hover{
                     background:linear-gradient($colour-primary, $colour-secondary);
                     -webkit-background-clip: text;

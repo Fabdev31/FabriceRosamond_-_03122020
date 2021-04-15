@@ -2,9 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="public/css/style.css"/>
+        <link rel="stylesheet" href="../PROJET3_GIT_TEST/public/css/style.css"/>
         <script src="https://kit.fontawesome.com/bc6a0bf992.js" crossorigin="anonymous"></script>
-        <link href="h" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,70 +23,76 @@
             <img src="D:/OPENCLASSROOMS/PROJET_3/writing-sass/Maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image-restaurant" class="photo-restaurant"/>
             <figure class="presentation-restaurant"> 
                 <h1 class="positionnement-titre-legende">À la française</h1>
-                <i class="far fa-heart"></i>
+                <div class="placement-coeurs">
+                    <i class="fas fa-heart icone-coeur-plein"></i>
+                    <i class="far fa-heart icone-coeur-vide"></i>
+                </div>
+
             </figure>
         </section>  
 
         <div id="section-menu">
-            <article class="ensemble-vignettes-restaurants">
-                <h2 class="positionnement-titre-article">ENTRÉES</h2>
-
-                <div class="vignettes-menu">
-                    <h3>Tartare de poulpe acidulé</h3>
-                    <p class="texte-vignette">Aux zestes d'orange</p>
-                    <p class="dernier-element-vignette">25€</p><i class="far fa-check-circle icone-validation"></i>
+            <article class="vignettes-entrees">
+                <div class="vignettes-entrees__apparition">
+                    <h2 class="positionnement-titre-article">ENTRÉES</h2>
+                    <div class="vignettes-menu">
+                        <h3>Tartare de poulpe acidulé</h3>
+                        <p class="texte-vignette">Aux zestes d'orange</p>
+                        <p class="dernier-element-vignette">25€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>    
+                    <div class="vignettes-menu">
+                        <h3>Velouté de légumes d'antan</h3>
+                        <p class="texte-vignette">Carotte, panais, topinambour</p>
+                        <p class="dernier-element-vignette">35€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>    
+                    <div class="vignettes-menu">
+                        <h3>Soupe à l'oignon</h3>
+                        <p class="texte-vignette">Revisitée</p>
+                        <p class="dernier-element-vignette">20€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>
                 </div>
-
-                <div class="vignettes-menu">
-                    <h3>Velouté de légumes d'antan</h3>
-                    <p class="texte-vignette">Carotte, panais, topinambour</p>
-                    <p class="dernier-element-vignette">35€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-
-                <div class="vignettes-menu">
-                    <h3>Soupe à l'oignon</h3>
-                    <p class="texte-vignette">Revisitée</p>
-                    <p class="dernier-element-vignette">20€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-
-                <h2 class="positionnement-titre-article">PLATS</h2>
-                <div class="vignettes-menu">
-                    <h3>Coquilles Saint-Jacques</h3>
-                    <p class="texte-vignette">Accompagnées d'une purée de panais</p>
-                    <p class="dernier-element-vignette">40€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-
-                <div class="vignettes-menu">
-                    <h3>Magret de canard</h3>
-                    <p class="texte-vignette">Et parmentier de pommes de terre</p>
-                    <p class="dernier-element-vignette">35€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-
-                <div class="vignettes-menu">
-                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                    <p class="texte-vignette">Sur son lit de gnocchis aux légumes</p>
-                    <p class="dernier-element-vignette">44€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-                
-                <h2 class="positionnement-titre-article">DESSERTS</h2>
-                <div class="vignettes-menu">
-                    <h3>Pétales de violettes glacés</h3>
-                    <p class="texte-vignette">Et purée de noisettes</p>
-                    <p class="dernier-element-vignette">18€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-                <div class="vignettes-menu">
-                    <h3>Fondant au chocolat</h3>
-                    <p class="texte-vignette">Revisité</p>
-                    <p class="dernier-element-vignette">22€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-
-                <div class="vignettes-menu">
-                    <h3>Millefeuille croustillant</h3>
-                    <p class="texte-vignette">Myrtilles et pâte d’amande</p>
-                    <p class="dernier-element-vignette">23€</p><i class="far fa-check-circle icone-validation"></i>
-                </div>
-                <button>Commander</button>
             </article>
+            <article class="vignettes-plats">
+                <div class="vignettes-plats__apparition">
+                    <h2 class="positionnement-titre-article">PLATS</h2>
+                    <div class="vignettes-menu">
+                        <h3>Coquilles Saint-Jacques</h3>
+                        <p class="texte-vignette">Accompagnées d'une purée de panais</p>
+                        <p class="dernier-element-vignette">40€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>
+                    <div class="vignettes-menu">
+                        <h3>Magret de canard</h3>
+                        <p class="texte-vignette">Et parmentier de pommes de terre</p>
+                        <p class="dernier-element-vignette">35€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>
+                    <div class="vignettes-menu">
+                        <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                        <p class="texte-vignette">Sur son lit de gnocchis aux légumes</p>
+                        <p class="dernier-element-vignette">44€</p><i class="far fa-check-circle icone-validation"></i>
+                </div>
+                </div>
+            </article>
+            <article class="vignettes-desserts">
+                <div class="vignettes-desserts__apparition">
+                    <h2 class="positionnement-titre-article">DESSERTS</h2>
+                    <div class="vignettes-menu">
+                        <h3>Pétales de violettes glacés</h3>
+                        <p class="texte-vignette">Et purée de noisettes</p>
+                        <p class="dernier-element-vignette">18€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>
+                    <div class="vignettes-menu">
+                        <h3>Fondant au chocolat</h3>
+                        <p class="texte-vignette">Revisité</p>
+                        <p class="dernier-element-vignette">22€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>
+                    <div class="vignettes-menu">
+                        <h3>Millefeuille croustillant</h3>
+                        <p class="texte-vignette">Myrtilles et pâte d’amande</p>
+                        <p class="dernier-element-vignette">23€</p><i class="far fa-check-circle icone-validation"></i>
+                    </div>
+                    <button>Commander</button>
+                </div>
+            </article>                
         </div>
 
         <footer>

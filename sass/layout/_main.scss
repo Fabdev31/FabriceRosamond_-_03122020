@@ -23,8 +23,7 @@ h2
             position: absolute;
             top: 0rem;
             }
-        .presentation-restaurant
-            {
+        .presentation-restaurant{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -46,10 +45,34 @@ h2
             {
                 margin-left: 5%;
             }
-
+            .placement-coeurs{
+                position: relative;
+                .icone-coeur-plein{
+                    background: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    bottom: 0;
+                    left:0;
+                    
+                    &:hover{
+                        background:linear-gradient($colour-primary, $colour-secondary);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    }
+                .icone-coeur-vide{
+                    font-size: 1.3em;
+                    font-weight: 200;
+                    margin: 0%;
+                }   
+            }
         }
     }
-
 
 #section-menu
 {
@@ -59,7 +82,7 @@ h2
     @include backgroundmaincolor($color-light-grey);
     padding-top: 20%;
     
-    .ensemble-vignettes-restaurants
+    .vignettes-entrees
     {
         margin-top: 16%;
         display: flex;
@@ -67,23 +90,22 @@ h2
         justify-content: center;
         align-content: center;
         align-items: center;
-
-    .positionnement-titre-article
-    {
+        &__apparition {
+            animation: entrees-apparitions 1500ms ;
+        }
+        .positionnement-titre-article{
         font-weight: $font-weight-light;
-
-    }
-    .vignettes-menu
-    {
-    position:relative;
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    @include backgroundmaincolor($colour-white);
-    border-radius: 25px;
-    margin-top: 0%;
-    margin-bottom: 5%;
-    width:95%;
+        }
+    .vignettes-menu{
+        position:relative;
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        @include backgroundmaincolor($colour-white);
+        border-radius: 25px;
+        margin-top: 0%;
+        margin-bottom: 5%;
+        width:95%;
 
     h3
     {
@@ -109,3 +131,14 @@ h2
 }
 }
 
+@keyframes entrees-apparitions{
+    0%{
+        opacity: .1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
