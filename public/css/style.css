@@ -243,6 +243,17 @@ header p {
 @font-face {
   font-family: "Roboto", "Shrikhand";
 }
+@keyframes menu-apparitions {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #bloc-page {
   height: 1000px;
 }
@@ -317,22 +328,28 @@ h2 {
   border-radius: 25px;
   background-color: #f6f6f6;
   padding-top: 20%;
-}
-#section-menu .vignettes-entrees {
-  margin-top: 16%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
 }
-#section-menu .vignettes-entrees__apparition {
-  animation: entrees-apparitions 1500ms;
+#section-menu .ensemble-vignettes-menu {
+  margin-top: 16%;
 }
-#section-menu .vignettes-entrees .positionnement-titre-article {
+#section-menu .ensemble-vignettes-menu__entrees {
+  animation: menu-apparitions 1500ms;
+}
+#section-menu .ensemble-vignettes-menu__plats {
+  animation: menu-apparitions 1500ms 1500ms backwards;
+}
+#section-menu .ensemble-vignettes-menu__desserts {
+  animation: menu-apparitions 1500ms 3000ms backwards;
+}
+#section-menu .ensemble-vignettes-menu .positionnement-titre-article {
   font-weight: 300;
 }
-#section-menu .vignettes-entrees .vignettes-menu {
+#section-menu .ensemble-vignettes-menu .vignettes-menu {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -343,34 +360,23 @@ h2 {
   margin-bottom: 5%;
   width: 95%;
 }
-#section-menu .vignettes-entrees .vignettes-menu h3 {
+#section-menu .ensemble-vignettes-menu .vignettes-menu h3 {
   width: 100%;
   margin-left: 5%;
 }
-#section-menu .vignettes-entrees .vignettes-menu .texte-vignette {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .texte-vignette {
   margin-left: 5%;
 }
-#section-menu .vignettes-entrees .vignettes-menu .dernier-element-vignette {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .dernier-element-vignette {
   margin-right: 5%;
 }
-#section-menu .vignettes-entrees .vignettes-menu .fa-check-circle {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .fa-check-circle {
   position: absolute;
   right: 2rem;
   top: 2rem;
   visibility: hidden;
 }
 
-@keyframes entrees-apparitions {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 footer {
   width: 100%;
   background-color: #323232;

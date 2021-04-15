@@ -1,4 +1,15 @@
 @import "../base/typography";
+@keyframes menu-apparitions{
+    0%{
+        opacity: .1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 #bloc-page
 {
@@ -15,14 +26,13 @@ h2
     width: 100%;
 }
 
-#presentation-restaurant
-    {
-        position: relative;
-        .photo-restaurant{
-            border-radius: 0px;
-            position: absolute;
-            top: 0rem;
-            }
+#presentation-restaurant{
+    position: relative;
+    .photo-restaurant{
+        border-radius: 0px;
+        position: absolute;
+        top: 0rem;
+    }
         .presentation-restaurant{
             display: flex;
             flex-direction: row;
@@ -74,71 +84,60 @@ h2
         }
     }
 
-#section-menu
-{
+#section-menu{
     font-family: $font-main;
     margin-top: 50%;
     border-radius:25px ;
     @include backgroundmaincolor($color-light-grey);
     padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     
-    .vignettes-entrees
-    {
+    .ensemble-vignettes-menu{
         margin-top: 16%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        &__apparition {
-            animation: entrees-apparitions 1500ms ;
+        &__entrees{
+            animation: menu-apparitions 1500ms ;
         }
-        .positionnement-titre-article{
-        font-weight: $font-weight-light;
+        &__plats{
+            animation: menu-apparitions 1500ms 1500ms backwards;
         }
-    .vignettes-menu{
-        position:relative;
-        display: flex;
-        justify-content:space-between;
-        flex-wrap: wrap;
-        @include backgroundmaincolor($colour-white);
-        border-radius: 25px;
-        margin-top: 0%;
-        margin-bottom: 5%;
-        width:95%;
-
-    h3
-    {
-        width: 100%;
-        margin-left: 5%;
+        &__desserts{
+            animation: menu-apparitions 1500ms 3000ms backwards;
+        }
+            .positionnement-titre-article{
+                font-weight: $font-weight-light;
+            }
+            .vignettes-menu{
+            position:relative;
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            @include backgroundmaincolor($colour-white);
+            border-radius: 25px;
+            margin-top: 0%;
+            margin-bottom: 5%;
+            width:95%;
+            h3{
+                width: 100%;
+                margin-left: 5%;
+            }
+            .texte-vignette{
+                margin-left: 5%;
+            }
+            .dernier-element-vignette{
+                margin-right: 5%;
+            }
+            .fa-check-circle{
+                position: absolute;
+                right: 2rem;
+                top: 2rem;
+                visibility:hidden;
+            }
+        }
     }
-    .texte-vignette
-    {
-        margin-left: 5%;
-    }
-    .dernier-element-vignette
-    {
-        margin-right: 5%;
-    }
-    .fa-check-circle
-    {
-        position: absolute;
-        right: 2rem;
-        top: 2rem;
-        visibility:hidden;
-    }
-}
-}
 }
 
-@keyframes entrees-apparitions{
-    0%{
-        opacity: .1;
-    }
-    50%{
-        opacity: .5;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+
