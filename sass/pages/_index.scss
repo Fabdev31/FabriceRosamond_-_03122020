@@ -51,18 +51,17 @@ img{
     }
 }
     
-    .section-recherche{
-        @include backgroundmaincolor($color-deep-grey);
-        padding-top: 3%;
-        padding-bottom: 3%;
-        font-size: map-get($font-size,vignette-menu-nav);
-        font-weight:500;
-    }
-    #section-nav
-    {
-        font-family: $font-main;
-        font-weight:$font-weight;
-        margin-top: map-get($margin-top,section);
+.section-recherche{
+    @include backgroundmaincolor($color-deep-grey);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: map-get($font-size,vignette-menu-nav);
+    font-weight:500;
+}
+#section-nav{
+    font-family: $font-main;
+    font-weight:$font-weight;
+    margin-top: map-get($margin-top,section);
     }
     h2
     {
@@ -85,8 +84,7 @@ img{
         @include backgroundmaincolor;
         font-size: map-get($font-size,vignette-menu-nav);
     
-        .numero-vignette
-    {
+        .numero-vignette{
         position: absolute;
         left: -1rem;
         border-radius: 25px;
@@ -117,40 +115,7 @@ img{
         padding-bottom: 5%;        
     }
     
-    .icone-coeur-vide{
-        font-size: 1.3em;
-        font-weight: 200;
-        margin: 0%;
-
-    }
-    .fa-blabla
-    {
-        background: linear-gradient($colour-secondary, $colour-primary);
-    }
-
-    .couleur-fond
-    {
-        background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
-    }
-    .icone-coeur-plein{
-        font-size: 1rem;
-        cursor: pointer;
-        background: pink;
-	background: -webkit-radial-gradient(33% 100% circle, #515ECF 4%, #9B36B7 30%, #D92E7F 62%, #F15245 85%, #FED373);
-	background: radial-gradient(circle at 33% 100%, #ff3be7 4%, #ff3be7 28%, #03ffe8 62%, #F15245 85%, #FED373);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
-    }
-
-.container
-{
-    border-radius: 25px;
-    width:30%;
-    height:150px;
-    background:linear-gradient($colour-primary,$colour-secondary);
-    background: scroll;
-}
+    
     
     .vignette-article-differentes
     {
@@ -174,14 +139,11 @@ img{
     }
     
     
-    figure
-    {
+    figure{
         @include backgroundmaincolor($colour-white);
         border-radius: map-get($border-radius, figure );
-    }
-    
-    figcaption
-    {
+
+        figcaption{
         margin-left: map-get($margin-left, h2 );
         width: 85%;
         display: flex;
@@ -190,15 +152,50 @@ img{
         align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-    }
-    .positionnement-text-vignette
-    {
+        
+        h3{
+        margin-top: 2%;
+        margin-bottom: 1%;
+        }
+        .placement-coeurs{
+            position: relative;
+            .icone-coeur-plein{
+                background: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 1.3rem;
+                cursor: pointer;
+                position: absolute;
+                top:0;
+                right: 0;
+                bottom: 0;
+                left:0;
+                
+                &:hover{
+                    background:linear-gradient($colour-primary, $colour-secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                }
+            .icone-coeur-vide{
+            font-size: 1.3em;
+            font-weight: 200;
+            margin: 0%;
+            }   
+
+        }
+        
+
+        
+
+        .positionnement-text-vignette{
         font-weight: $font-weight-normal;
         width: 100%;
         margin-top: 1%;
+        }
     }
-    h3
-    {
-        margin-top: 2%;
-        margin-bottom: 1%;
-    }
+}
+    
+    
+    
+    

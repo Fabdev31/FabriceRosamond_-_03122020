@@ -158,38 +158,6 @@ h2 {
   padding-bottom: 5%;
 }
 
-.icone-coeur-vide {
-  font-size: 1.3em;
-  font-weight: 200;
-  margin: 0%;
-}
-
-.fa-blabla {
-  background: linear-gradient(#FF79DA, #9356DC);
-}
-
-.couleur-fond {
-  background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
-}
-
-.icone-coeur-plein {
-  font-size: 1rem;
-  cursor: pointer;
-  background: pink;
-  background: -webkit-radial-gradient(33% 100% circle, #515ECF 4%, #9B36B7 30%, #D92E7F 62%, #F15245 85%, #FED373);
-  background: radial-gradient(circle at 33% 100%, #ff3be7 4%, #ff3be7 28%, #03ffe8 62%, #F15245 85%, #FED373);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.container {
-  border-radius: 25px;
-  width: 30%;
-  height: 150px;
-  background: linear-gradient(#9356DC, #FF79DA);
-  background: scroll;
-}
-
 .vignette-article-differentes {
   background-color: #fff;
   border-radius: 25px;
@@ -213,8 +181,7 @@ figure {
   background-color: #fff;
   border-radius: 25px;
 }
-
-figcaption {
+figure figcaption {
   margin-left: 8%;
   width: 85%;
   display: flex;
@@ -224,16 +191,39 @@ figcaption {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-.positionnement-text-vignette {
+figure figcaption h3 {
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+figure figcaption .placement-coeurs {
+  position: relative;
+}
+figure figcaption .placement-coeurs .icone-coeur-plein {
+  background: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+figure figcaption .placement-coeurs .icone-coeur-plein:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+figure figcaption .placement-coeurs .icone-coeur-vide {
+  font-size: 1.3em;
+  font-weight: 200;
+  margin: 0%;
+}
+figure figcaption .positionnement-text-vignette {
   font-weight: 400;
   width: 100%;
   margin-top: 1%;
-}
-
-h3 {
-  margin-top: 2%;
-  margin-bottom: 1%;
 }
 
 header {
