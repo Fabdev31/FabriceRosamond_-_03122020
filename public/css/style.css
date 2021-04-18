@@ -336,17 +336,26 @@ h2 {
   flex-direction: row;
   align-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+}
+#section-menu .agencement-vignettes .elements-text-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #section-menu .agencement-vignettes .form-cercle {
   background-color: #99E2D0;
-  width: 10%;
-  height: 50px;
+  width: 20%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border: #99E2D0 solid 2px;
-  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-#section-menu .agencement-vignettes .fa-check-circle {
+#section-menu .agencement-vignettes .form-cercle .fa-check-circle {
   font-size: 2rem;
   visibility: visible;
   margin-bottom: 0%;
