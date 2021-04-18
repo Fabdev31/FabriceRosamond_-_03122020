@@ -382,7 +382,7 @@ h2 {
 #section-menu .ensemble-vignettes-menu .vignettes-menu {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   background-color: #fff;
   border-radius: 25px;
@@ -400,13 +400,6 @@ h2 {
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .dernier-element-vignette {
   margin-right: 5%;
-}
-#section-menu .ensemble-vignettes-menu .vignettes-menu .fa-check-circle {
-  font-size: 2rem;
-  visibility: visible;
-  margin-bottom: 0%;
-  background-color: #99E2D0;
-  color: white;
 }
 
 footer {

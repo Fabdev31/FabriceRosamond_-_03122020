@@ -99,6 +99,7 @@ h2
         align-content: center;
         align-items: center;
         flex-wrap: nowrap;
+
         .elements-text-menu{
             display: flex;
             flex-direction: row;
@@ -144,7 +145,7 @@ h2
                 .vignettes-menu{
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 justify-content:space-between;
                 @include backgroundmaincolor($colour-white);
                 border-radius: 25px;
@@ -165,13 +166,7 @@ h2
                 .dernier-element-vignette{
                     margin-right: 5%;
                 }
-                .fa-check-circle{
-                    font-size: 2rem;
-                    visibility:visible;
-                    margin-bottom: 0%;
-                    background-color: $colour-tertiary;
-                    color: white;
-                }
+    
             }
         }
     
