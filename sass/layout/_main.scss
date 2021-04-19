@@ -93,6 +93,7 @@ h2
     align-content: center;
     align-items: center;
     .ensemble-vignettes-menu{
+        width: 95%;
         display: flex;
         flex-direction: column;
         margin-top: 16%;
@@ -108,34 +109,30 @@ h2
         .positionnement-titre-article{
             font-weight: $font-weight-light;
         }
-        .agencement-vignettes{
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
+       
             .vignettes-menu{
                 display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content:space-between;
                 @include backgroundmaincolor($colour-white);
                 border-radius: 25px;
                 margin-top: 0%;
                 margin-bottom: 5%;
-                width:95%;
+                width: 100%;
                 cursor: pointer;
                 .elements-text-menu{
                     display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    /*flex-direction: row;
+                    flex-wrap: wrap;*/
                     justify-content:space-between;
                     width: 100%;
+
                     h3{
                         width: 100%;
                         margin-left: 5%;
                     }
                     .description-menu{
+
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
@@ -143,6 +140,9 @@ h2
                         width: 100%;
                         .texte-vignette{
                             margin-left: 5%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         .dernier-element-vignette{
                             margin-right: 5%;
@@ -170,7 +170,7 @@ h2
                     }
                 }
             }    
-        }
+        
     }
     
 }

@@ -332,6 +332,7 @@ h2 {
   align-items: center;
 }
 #section-menu .ensemble-vignettes-menu {
+  width: 95%;
   display: flex;
   flex-direction: column;
   margin-top: 16%;
@@ -348,50 +349,45 @@ h2 {
 #section-menu .ensemble-vignettes-menu .positionnement-titre-article {
   font-weight: 300;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes {
+#section-menu .ensemble-vignettes-menu .vignettes-menu {
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   background-color: #fff;
   border-radius: 25px;
   margin-top: 0%;
   margin-bottom: 5%;
-  width: 95%;
+  width: 100%;
   cursor: pointer;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .elements-text-menu {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
   justify-content: space-between;
   width: 100%;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu h3 {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .elements-text-menu h3 {
   width: 100%;
   margin-left: 5%;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu .description-menu {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .elements-text-menu .description-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu .description-menu .texte-vignette {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .elements-text-menu .description-menu .texte-vignette {
   margin-left: 5%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu .description-menu .dernier-element-vignette {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .elements-text-menu .description-menu .dernier-element-vignette {
   margin-right: 5%;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .form-cercle {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .form-cercle {
   background-color: #99E2D0;
   width: 20%;
   border-top-right-radius: 15px;
@@ -402,7 +398,7 @@ h2 {
   align-items: center;
   flex-wrap: nowrap;
 }
-#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .form-cercle .fa-check-circle {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .form-cercle .fa-check-circle {
   font-size: 2rem;
   visibility: visible;
   margin-bottom: 0%;
