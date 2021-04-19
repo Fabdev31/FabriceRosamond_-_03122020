@@ -14,7 +14,6 @@
     height: 1000px;
 }
 
-
 #logo-header
 {
     border-radius: 0px;
@@ -93,56 +92,29 @@ h2
     justify-content: center;
     align-content: center;
     align-items: center;
-    .agencement-vignettes{
+    .ensemble-vignettes-menu{
         display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-
-        .elements-text-menu{
+        flex-direction: column;
+        margin-top: 16%;
+        &__entrees{
+            animation: menu-apparitions 500ms ;
+        }
+        &__plats{
+            animation: menu-apparitions 500ms 500ms backwards;
+        }
+        &__desserts{
+            animation: menu-apparitions 500ms 1000ms backwards;
+        }
+        .positionnement-titre-article{
+            font-weight: $font-weight-light;
+        }
+        .agencement-vignettes{
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
-            justify-content:space-between;
-        }
-        .form-cercle{
-            background-color: $colour-tertiary;
-            width: 20%;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            border: $colour-tertiary solid 2px;
-            display: flex;
-            justify-content: center;
+            align-content: center;
             align-items: center;
             flex-wrap: nowrap;
-
-            .fa-check-circle{
-                font-size: 2rem;
-                visibility:visible;
-                margin-bottom: 0%;
-                background-color: $colour-tertiary;
-                color: white;
-            }
-        }
-    }
-        .ensemble-vignettes-menu{
-            display: flex;
-            flex-direction: column;
-            margin-top: 16%;
-            &__entrees{
-                animation: menu-apparitions 500ms ;
-            }
-            &__plats{
-                animation: menu-apparitions 500ms 500ms backwards;
-            }
-            &__desserts{
-                animation: menu-apparitions 500ms 1000ms backwards;
-            }
-                .positionnement-titre-article{
-                    font-weight: $font-weight-light;
-                }
-                .vignettes-menu{
+            .vignettes-menu{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -153,22 +125,50 @@ h2
                 margin-bottom: 5%;
                 width:95%;
                 cursor: pointer;
-                &:hover{
-                    
+                .elements-text-menu{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content:space-between;
+                    h3{
+                        width: 100%;
+                        margin-left: 5%;
+                    }
+                    .description-menu{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        .texte-vignette{
+                            margin-left: 5%;
+                        }
+                        .dernier-element-vignette{
+                            margin-right: 5%;
+                        }
+                    }
+
                 }
-                h3{
-                    width: 100%;
-                    margin-left: 5%;
+                .form-cercle{
+                    background-color: $colour-tertiary;
+                    width: 20%;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    border: $colour-tertiary solid 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: nowrap;
+
+                    .fa-check-circle{
+                        font-size: 2rem;
+                        visibility:visible;
+                        margin-bottom: 0%;
+                        background-color: $colour-tertiary;
+                        color: white;
+                    }
                 }
-                .texte-vignette{
-                    margin-left: 5%;
-                }
-                .dernier-element-vignette{
-                    margin-right: 5%;
-                }
-    
-            }
+            }    
         }
+    }
     
 }
 

@@ -331,37 +331,6 @@ h2 {
   align-content: center;
   align-items: center;
 }
-#section-menu .agencement-vignettes {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-#section-menu .agencement-vignettes .elements-text-menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-#section-menu .agencement-vignettes .form-cercle {
-  background-color: #99E2D0;
-  width: 20%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border: #99E2D0 solid 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-#section-menu .agencement-vignettes .form-cercle .fa-check-circle {
-  font-size: 2rem;
-  visibility: visible;
-  margin-bottom: 0%;
-  background-color: #99E2D0;
-  color: white;
-}
 #section-menu .ensemble-vignettes-menu {
   display: flex;
   flex-direction: column;
@@ -379,7 +348,14 @@ h2 {
 #section-menu .ensemble-vignettes-menu .positionnement-titre-article {
   font-weight: 300;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu {
+#section-menu .ensemble-vignettes-menu .agencement-vignettes {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -391,15 +367,44 @@ h2 {
   width: 95%;
   cursor: pointer;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu h3 {
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu h3 {
   width: 100%;
   margin-left: 5%;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu .texte-vignette {
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu .description-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu .description-menu .texte-vignette {
   margin-left: 5%;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu .dernier-element-vignette {
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .elements-text-menu .description-menu .dernier-element-vignette {
   margin-right: 5%;
+}
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .form-cercle {
+  background-color: #99E2D0;
+  width: 20%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: #99E2D0 solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#section-menu .ensemble-vignettes-menu .agencement-vignettes .vignettes-menu .form-cercle .fa-check-circle {
+  font-size: 2rem;
+  visibility: visible;
+  margin-bottom: 0%;
+  background-color: #99E2D0;
+  color: white;
 }
 
 footer {
