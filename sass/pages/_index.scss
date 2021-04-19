@@ -126,7 +126,6 @@ h2{
     @include backgroundmaincolor($colour-tertiary);
     color:$color-text-nouveau;
     }   
-    
 figure{
     @include backgroundmaincolor($colour-white);
     border-radius: map-get($border-radius, figure );
