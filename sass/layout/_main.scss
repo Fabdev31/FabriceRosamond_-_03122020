@@ -130,6 +130,7 @@ h2
                     flex-direction: row;
                     flex-wrap: wrap;
                     justify-content:space-between;
+                    width: 100%;
                     h3{
                         width: 100%;
                         margin-left: 5%;
@@ -138,6 +139,8 @@ h2
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
+                        justify-content: space-between;
+                        width: 100%;
                         .texte-vignette{
                             margin-left: 5%;
                         }
