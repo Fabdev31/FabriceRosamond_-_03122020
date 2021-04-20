@@ -110,16 +110,50 @@ h2
             font-weight: $font-weight-light;
         }
        
-            .vignettes-menu{
+        .vignettes-menu{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include backgroundmaincolor($colour-white);
+            border-radius: 25px;
+            margin-top: 0%;
+            margin-bottom: 5%;
+            width: 100%;
+            cursor: pointer;
+            overflow-x: hidden;
+            position: relative;
+            &:hover > .vignettes-menu-form-cercle{                
+                transform-origin: left;
+                transform:translateX(-100%);
+            }
+            .vignettes-menu-form-cercle{
+                position: absolute;
+                top: 0;
+                right: -21%;
+                bottom: 0;
+
+                background-color: $colour-tertiary;
+                width: 20%;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border: $colour-tertiary solid 2px;
                 display: flex;
-                @include backgroundmaincolor($colour-white);
-                border-radius: 25px;
-                margin-top: 0%;
-                margin-bottom: 5%;
-                width: 100%;
-                cursor: pointer;
-                .elements-text-menu{
-                    display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                transition: transform 500ms;
+
+                .fa-check-circle{
+                    font-size: 2rem;
+                    visibility:visible;
+                    margin-bottom: 0%;
+                    background-color: $colour-tertiary;
+                    color: white;
+                }
+            }
+
+            &__text{
+                display: flex;
                     flex-direction: column;
                     flex-wrap: nowrap;
                     /*flex-direction: row;
@@ -132,7 +166,6 @@ h2
                         margin-left: 5%;
                     }
                     .description-menu{
-
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
@@ -150,25 +183,8 @@ h2
                     }
 
                 }
-                .form-cercle{
-                    background-color: $colour-tertiary;
-                    width: 20%;
-                    border-top-right-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    border: $colour-tertiary solid 2px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: nowrap;
 
-                    .fa-check-circle{
-                        font-size: 2rem;
-                        visibility:visible;
-                        margin-bottom: 0%;
-                        background-color: $colour-tertiary;
-                        color: white;
-                    }
-                }
+
             }    
         
     }
