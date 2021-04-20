@@ -362,15 +362,14 @@ h2 {
   cursor: pointer;
   overflow-x: hidden;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu:active > .vignettes-menu-form-cercle {
+#section-menu .ensemble-vignettes-menu .vignettes-menu:hover > .vignettes-menu-form-cercle {
   transform: translateX(0%);
-}
-#section-menu .ensemble-vignettes-menu .vignettes-menu:active + .icone-validation {
-  transform: rotate(360deg);
+  width: 20%;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-form-cercle {
   background-color: #99E2D0;
-  width: 20%;
+  width: 0%;
+  overflow: hidden;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border: #99E2D0 solid 2px;

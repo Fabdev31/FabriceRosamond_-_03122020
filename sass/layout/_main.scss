@@ -125,15 +125,15 @@ h2
             cursor: pointer;
             overflow-x: hidden;
 
-            &:active > .vignettes-menu-form-cercle{
+            &:hover > .vignettes-menu-form-cercle{
                 transform:translateX(0%);
+                width: 20%;
             }
-            &:active + .icone-validation{
-                transform: rotate(360deg);
-            }
+
             .vignettes-menu-form-cercle{
                 background-color: $colour-tertiary;
-                width: 20%;
+                width: 0%;
+                overflow: hidden;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 border: $colour-tertiary solid 2px;
