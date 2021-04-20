@@ -121,17 +121,15 @@ h2
             width: 100%;
             cursor: pointer;
             overflow-x: hidden;
-            position: relative;
-            &:hover > .vignettes-menu-form-cercle{                
-                transform-origin: left;
-                transform:translateX(-100%);
+
+            &:active > .vignettes-menu-form-cercle{
+                transform:translateX(0%);
+
+            }
+            &:active > .fa-check-circle{
+                transform: rotate(360deg);
             }
             .vignettes-menu-form-cercle{
-                position: absolute;
-                top: 0;
-                right: -21%;
-                bottom: 0;
-
                 background-color: $colour-tertiary;
                 width: 20%;
                 border-top-right-radius: 15px;
@@ -141,18 +139,24 @@ h2
                 justify-content: center;
                 align-items: center;
                 flex-wrap: nowrap;
+                transform: translateX(100%);
                 transition: transform 500ms;
+                transform-origin: right;
+                visibility: visible;
 
-                .fa-check-circle{
-                    font-size: 2rem;
-                    visibility:visible;
-                    margin-bottom: 0%;
-                    background-color: $colour-tertiary;
-                    color: white;
-                }
+                    .fa-check-circle{
+                        font-size: 2rem;
+                        visibility:visible;
+                        margin-bottom: 0%;
+                        background-color: $colour-tertiary;
+                        color: white;
+                        transform: rotate(0deg);
+                        transition: transform 500ms;
+                        display: block;
+                    }
             }
 
-            &__text{
+            .vignettes-menu-text{
                 display: flex;
                     flex-direction: column;
                     flex-wrap: nowrap;

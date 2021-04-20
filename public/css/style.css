@@ -360,17 +360,14 @@ h2 {
   width: 100%;
   cursor: pointer;
   overflow-x: hidden;
-  position: relative;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu:hover > .vignettes-menu-form-cercle {
-  transform-origin: left;
-  transform: translateX(-100%);
+#section-menu .ensemble-vignettes-menu .vignettes-menu:active > .vignettes-menu-form-cercle {
+  transform: translateX(0%);
+}
+#section-menu .ensemble-vignettes-menu .vignettes-menu:active > .fa-check-circle {
+  transform: rotate(360deg);
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-form-cercle {
-  position: absolute;
-  top: 0;
-  right: -21%;
-  bottom: 0;
   background-color: #99E2D0;
   width: 20%;
   border-top-right-radius: 15px;
@@ -380,7 +377,10 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  transform: translateX(100%);
   transition: transform 500ms;
+  transform-origin: right;
+  visibility: visible;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-form-cercle .fa-check-circle {
   font-size: 2rem;
@@ -388,8 +388,11 @@ h2 {
   margin-bottom: 0%;
   background-color: #99E2D0;
   color: white;
+  transform: rotate(0deg);
+  transition: transform 500ms;
+  display: block;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu__text {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -398,24 +401,24 @@ h2 {
   justify-content: space-between;
   width: 100%;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu__text h3 {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text h3 {
   width: 100%;
   margin-left: 5%;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu__text .description-menu {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text .description-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu__text .description-menu .texte-vignette {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text .description-menu .texte-vignette {
   margin-left: 5%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#section-menu .ensemble-vignettes-menu .vignettes-menu__text .description-menu .dernier-element-vignette {
+#section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text .description-menu .dernier-element-vignette {
   margin-right: 5%;
 }
 
