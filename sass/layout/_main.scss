@@ -9,6 +9,9 @@
     }
 }
 
+@keyframes loader{
+
+}
 #bloc-page
 {
     height: 1000px;
@@ -124,9 +127,8 @@ h2
 
             &:active > .vignettes-menu-form-cercle{
                 transform:translateX(0%);
-
             }
-            &:active > .fa-check-circle{
+            &:active + .icone-validation{
                 transform: rotate(360deg);
             }
             .vignettes-menu-form-cercle{
@@ -139,23 +141,21 @@ h2
                 justify-content: center;
                 align-items: center;
                 flex-wrap: nowrap;
-                transform: translateX(100%);
+                transform: translateX(100%) rotate(0deg);
                 transition: transform 500ms;
                 transform-origin: right;
-                visibility: visible;
 
-                    .fa-check-circle{
+                    .icone-validation{
                         font-size: 2rem;
                         visibility:visible;
                         margin-bottom: 0%;
                         background-color: $colour-tertiary;
                         color: white;
-                        transform: rotate(0deg);
-                        transition: transform 500ms;
                         display: block;
+                        transform: rotate(0deg);
+                        transition: all 500ms;
                     }
             }
-
             .vignettes-menu-text{
                 display: flex;
                     flex-direction: column;
