@@ -235,9 +235,13 @@ header {
   margin-bottom: 5%;
 }
 header p {
+  position: relative;
   margin-bottom: 0%;
   margin-left: -32%;
   margin-top: 5%;
+}
+header p .icone-fleche {
+  color: black;
 }
 
 @font-face {
@@ -414,6 +418,8 @@ h2 {
 }
 #section-menu .ensemble-vignettes-menu .positionnement-titre-article {
   font-weight: 300;
+  text-align: left;
+  margin-left: 3%;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu {
   display: flex;
