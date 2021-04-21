@@ -251,7 +251,48 @@ header p {
     opacity: 1;
   }
 }
-@keyframes loader {}
+@keyframes loader1 {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  25% {
+    rotate: 90deg;
+    opacity: 1;
+  }
+  50% {
+    rotate: 180deg;
+    opacity: 0;
+  }
+  75% {
+    rotate: 270deg;
+    opacity: 1;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes loader-2 {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  25% {
+    rotate: -90deg;
+    opacity: 1;
+  }
+  50% {
+    rotate: -180deg;
+    opacity: 0;
+  }
+  75% {
+    rotate: -270deg;
+    opacity: 1;
+  }
+  100% {
+    rotate: -360deg;
+  }
+}
 #bloc-page {
   height: 1000px;
 }
@@ -266,6 +307,36 @@ h2 {
 
 #presentation-restaurant {
   position: relative;
+}
+#presentation-restaurant .loader {
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border: #9356DC dashed 15px;
+  color: #99E2D0;
+  position: absolute;
+  top: 0rem;
+  right: 10%;
+  z-index: 3;
+  width: 75%;
+  height: 300px;
+  animation: loader1 1s 200ms 3 both;
+}
+#presentation-restaurant .loader2 {
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border: #FF79DA dashed 15px;
+  color: #9356DC;
+  position: absolute;
+  top: 2rem;
+  right: 20%;
+  z-index: 3;
+  width: 60%;
+  height: 250px;
+  animation: loader-2 1s 500ms 3;
 }
 #presentation-restaurant .photo-restaurant {
   border-radius: 0px;
