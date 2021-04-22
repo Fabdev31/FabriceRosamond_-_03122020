@@ -172,7 +172,7 @@ h2
                     transition: opacity 3s;
 
                     
-                    &:hover{
+                    &:active{
                         background:linear-gradient($colour-primary, $colour-secondary);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -232,16 +232,16 @@ h2
             cursor: pointer;
             overflow-x: hidden;
 
-            &:hover > .vignettes-menu-form-cercle{
+            &:active > .vignettes-menu-form-cercle{
                 transform-origin: right;
                 transform: translateX(0%);
-                transition:  all 1s;
+                transition:  all 500ms;
                 width: 20%;
             }
 
-            &:hover .icone-validation{
+            &:active .icone-validation{
                 transform: rotate(0deg);
-                transition: transform 1s;
+                transition: transform 500ms;
             }
             .vignettes-menu-form-cercle{
                 background-color: $colour-tertiary;
@@ -254,7 +254,7 @@ h2
                 align-items: center;
                 flex-wrap: nowrap;
                 transform: translateX(100%);
-                transition: all 1s;
+                transition: all 500ms;
                 width: 0%;
                 
             }
@@ -303,6 +303,13 @@ h2
             }
             .positionnement-bouton-menu{
                 text-align: center;
+                button{
+                    @include shadow-main;
+                    &:hover{
+                        filter:brightness(1.2);
+                        @include shadow-hover;
+                    } 
+                }
             }    
         
     }

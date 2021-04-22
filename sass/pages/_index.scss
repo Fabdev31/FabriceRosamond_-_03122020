@@ -49,6 +49,14 @@ img{
     margin-left: 5%;
     font-weight: 200;  
     }
+    button{
+        @include shadow-main;
+        &:hover{
+            filter:brightness(1.2);
+            @include shadow-hover;
+        } 
+    }
+
 }
     
 .section-recherche{
@@ -80,8 +88,14 @@ h2{
     padding-top: 3%;
     padding-bottom: 3%;
     @include backgroundmaincolor;
+    @include shadow-main;
     font-size: map-get($font-size,vignette-menu-nav);
-    
+    &:hover{
+        background-color: lighten($color: $colour-primary, $amount: 30%);
+    }
+    &:hover > .element-vignette{
+        color: $colour-primary;
+    }
     .numero-vignette{
         position: absolute;
         left: -1rem;
@@ -113,6 +127,7 @@ h2{
     @include backgroundmaincolor($colour-white);
     border-radius: map-get($border-radius , vignette-article-differentes );
     position: relative;
+    @include shadow-main;
 }
 #photo-plat-restaurant{
     width: 100%;
@@ -129,6 +144,8 @@ h2{
 figure{
     @include backgroundmaincolor($colour-white);
     border-radius: map-get($border-radius, figure );
+    @include shadow-main;
+
 
     figcaption{
         margin-left: map-get($margin-left, h2 );
