@@ -366,7 +366,7 @@ h2 {
   margin-right: 5%;
 }
 #presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-plein {
-  background: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.3rem;
@@ -376,11 +376,15 @@ h2 {
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0;
+  transition: opacity 3s;
 }
 #presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-plein:hover {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
+  transform-origin: bottom;
 }
 #presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-vide {
   font-size: 1.3em;
