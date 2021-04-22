@@ -3,7 +3,6 @@
     0%{
         opacity: 0;
     }
-
     100%{
         opacity: 1;
     }
@@ -16,7 +15,6 @@
         transform:translateX(100%);
     }
 }
-
 @keyframes encoche-retour{
     from{
         transform: translateX(100%);
@@ -25,8 +23,6 @@
         transform: translateX(0%);
     }
 }
-    
-
 @keyframes remplissage-coeur{
     0%{
         transform: scale(0);
@@ -38,7 +34,6 @@
         transform: scale(1);
     }
 }
-
 @keyframes loader1{
     0%{
         opacity: 0;
@@ -46,7 +41,6 @@
     25%{
         opacity: 1;
     }
-
     50%{
         opacity: 0;
     }
@@ -64,7 +58,6 @@
     25%{
         opacity: 1;
     }
-
     50%{
         opacity: 0;
     }
@@ -75,9 +68,7 @@
         opacity:0;
     }
 }
-
-#bloc-page
-{
+#bloc-page{
     height: 1000px;
     .loader{
         border-top-left-radius: 150px;
@@ -94,7 +85,6 @@
         height: 300px;
         animation:loader1 1s 3 both;
     }
-
     .loader2{
         border-top-left-radius: 150px;
         border-top-right-radius: 150px;
@@ -109,29 +99,21 @@
         width: 60%;
         height: 230px;
         animation:loader-2 1s 250ms 3 both;
-        }
+    }
 }
-
-#logo-header
-{
+#logo-header{
     border-radius: 0px;
 }
-h2
-{
+h2{
     width: 100%;
 }
-
 #presentation-restaurant{
     position: relative;
-    
-
- 
     .photo-restaurant{
         border-radius: 0px;
         position: absolute;
         top: 0rem;
     }
-
         .presentation-restaurant{
             display: flex;
             flex-direction: row;
@@ -150,8 +132,7 @@ h2
             padding-bottom: 0%;
             padding-top: 5%;
             margin-top: 9%;
-            h1
-            {
+            h1{
                 margin-left: 5%;
             }
             .placement-coeurs{
@@ -169,14 +150,13 @@ h2
                     bottom: 0;
                     left:0;
                     opacity:0;
-                    transition: opacity 3s;
-
-                    
+                    transition: opacity 1000ms;
                     &:active{
                         background:linear-gradient($colour-primary, $colour-secondary);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         opacity: 1;
+                        transition: opacity 300ms;
                     }
                 }
                 .icone-coeur-vide{
@@ -187,7 +167,6 @@ h2
             }
         }
     }
-
 #section-menu{
     font-family: $font-main;
     margin-top: 50%;
@@ -219,7 +198,6 @@ h2
             text-align: left;
             margin-left: 3%;
         }
-       
         .vignettes-menu{
             display: flex;
             flex-direction: row;
@@ -231,14 +209,12 @@ h2
             width: 100%;
             cursor: pointer;
             overflow-x: hidden;
-
             &:active > .vignettes-menu-form-cercle{
                 transform-origin: right;
                 transform: translateX(0%);
                 transition:  all 500ms;
                 width: 20%;
             }
-
             &:active .icone-validation{
                 transform: rotate(0deg);
                 transition: transform 500ms;
@@ -256,7 +232,6 @@ h2
                 transform: translateX(100%);
                 transition: all 500ms;
                 width: 0%;
-                
             }
             .icone-validation{
                 font-size: 2rem;
@@ -276,7 +251,6 @@ h2
                     flex-wrap: wrap;*/
                     justify-content:space-between;
                     width: 100%;
-
                     h3{
                         width: 100%;
                         margin-left: 5%;
@@ -297,9 +271,7 @@ h2
                             margin-right: 5%;
                         }
                     }
-
                 }
-
             }
             .positionnement-bouton-menu{
                 text-align: center;
@@ -310,10 +282,6 @@ h2
                         @include shadow-hover;
                     } 
                 }
-            }    
-        
-    }
-    
+            }
+    }  
 }
-
-
