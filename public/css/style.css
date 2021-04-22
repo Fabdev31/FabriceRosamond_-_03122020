@@ -466,16 +466,12 @@ h2 {
 #section-menu .ensemble-vignettes-menu .vignettes-menu:hover > .vignettes-menu-form-cercle {
   transform-origin: right;
   transform: translateX(0%);
-  transition: all 2s;
+  transition: all 1s;
   width: 20%;
-}
-#section-menu .ensemble-vignettes-menu .vignettes-menu a:not(:hover) > .vignettes-menu-form-cercle {
-  transform: translateX(100%);
-  transition: all 2s;
-  width: 0%;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu:hover .icone-validation {
   transform: rotate(0deg);
+  transition: transform 1s;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-form-cercle {
   background-color: #99E2D0;
@@ -488,7 +484,7 @@ h2 {
   align-items: center;
   flex-wrap: nowrap;
   transform: translateX(100%);
-  transition: all 2s;
+  transition: all 1s;
   width: 0%;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .icone-validation {
@@ -499,7 +495,7 @@ h2 {
   color: white;
   display: block;
   transform: rotate(360deg);
-  transition: transform 500ms;
+  transition: none;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text {
   display: flex;
