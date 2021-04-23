@@ -17,29 +17,42 @@ footer
         font-weight: $font-weight-normal;
         margin-left: map-get($margin-left, h2 );
     }
-}
-.texte-footer
-{
-    margin-left: map-get($margin-left, h2 );
+    .texte-footer{
+        margin-left: map-get($margin-left, h2 );
+    }
+
+    .icon-footer{
+        margin-right: 5%;
+    }
+    .fa-hands-helping{
+        font-size: 0.65em;
+        transform: rotate(-10deg);
+    }
+    a{
+        text-decoration: none;
+        text-decoration: none;
+        color: $colour-white;
+    }
+
+    #lien-mail-contact{
+        margin-left: map-get($margin-left, h2 );
+    }
 }
 
-.icon-footer
-{
-    margin-right: 5%;
-}
-.fa-hands-helping
-{
-    font-size: 0.65em;
-    transform: rotate(-10deg);
-}
-a
-{
-    text-decoration: none;
-    text-decoration: none;
-    color: $colour-white;
-}
-
-#lien-mail-contact
-{
-    margin-left: map-get($margin-left, h2 );
+footer{
+    @include tablette1{ 
+        .elements-footer{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .texte-footer{
+                width: 40%;
+            }
+            .texte-footer{order: 1;};
+            .texte-footer:nth-of-type(1){order:3;};
+            #lien-mail-contact{
+                width: 40%;
+            }
+        }
+    }
 }

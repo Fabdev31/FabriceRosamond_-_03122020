@@ -12,35 +12,35 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
+    .logo-header {
+        margin-top: 5%;
+        width: 30%;
+        border-radius: 0%;
+    }
 }
-.logo-header {
-    margin-top: 5%;
-    width: 30%;
-    border-radius: 0%;
-}
-img{
-    width: 100%;
-    object-fit: contain;
-    border-radius: 25px 25px 0px 0px;
-} 
-#logo-header{
-    border-radius: 0px;
-}
+
 #section-recherche {
     font-size: map-get($font-size,section-recherche);
     @include backgroundmaincolor;
     font-family: 'Roboto';
     text-align: center;
     padding-bottom: 8%;
+    .section-recherche{
+        @include backgroundmaincolor($color-deep-grey);
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: map-get($font-size,vignette-menu-nav);
+        font-weight:500;
+    }
     h1{
         width: 80%;
         margin-left: 10%;
-        font-weight: 900;
+        font-weight: 500;
     }
-.sous-titre{
-    width: 90%;
-    margin-left: 5%;
-    font-weight: 200;  
+    .sous-titre{
+        width: 90%;
+        margin-left: 5%;
+        font-weight: 200;  
     }
     button{
         @include shadow-main;
@@ -49,139 +49,182 @@ img{
             @include shadow-hover;
         }
     }
-}  
-.section-recherche{
-    @include backgroundmaincolor($color-deep-grey);
-    padding-top: 3%;
-    padding-bottom: 3%;
-    font-size: map-get($font-size,vignette-menu-nav);
-    font-weight:500;
 }
 #section-nav{
     font-family: $font-main;
     font-weight:$font-weight;
     margin-top: map-get($margin-top,section);
-}
-h2{
-    margin-left: map-get($margin-left,h2);
-    width: 90%;
-}
-.vignette-menu-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:flex-start;
-    width: 80%;
-    border-radius: 15px;
-    position: relative;
-    margin-left: 10%;
-    margin-bottom: 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    @include backgroundmaincolor;
-    @include shadow-main;
-    font-size: map-get($font-size,vignette-menu-nav);
-    &:hover{
-        background-color: lighten($color: $colour-primary, $amount: 30%);
+    h2{
+        margin-left: map-get($margin-left,h2);
+        width: 90%;
     }
-    &:hover > .element-vignette{
-        color: $colour-primary;
+    .ensemble-vignettes-nav{
+        .vignette-menu-nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:flex-start;
+            width: 80%;
+            border-radius: 15px;
+            position: relative;
+            margin-left: 10%;
+            margin-bottom: 5%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            @include backgroundmaincolor;
+            @include shadow-main;
+            font-size: map-get($font-size,vignette-menu-nav);
+            &:hover{
+                background-color: lighten($color: $colour-primary, $amount: 30%);
+            }
+            &:hover > .element-vignette{
+                color: $colour-primary;
+            }
+            .numero-vignette{
+                position: absolute;
+                left: -1rem;
+                border-radius: 25px;
+                @include backgroundmaincolor($colour-primary);
+                padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+                color: $colour-white;
+                font-size: 0.8em;
+            }
+            .element-vignette{
+                margin-left: map-get($margin-left, element-vignette);
+                color: grey;
+            }
+            .texte-vignette{
+                margin-left: map-get($margin-left, texte-vignette)
+            }
+        }
     }
-    .numero-vignette{
-        position: absolute;
-        left: -1rem;
-        border-radius: 25px;
-        @include backgroundmaincolor($colour-primary);
-        padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-        color: $colour-white;
-        font-size: 0.8em;
-    }
 }
-.element-vignette{
-    margin-left: map-get($margin-left, element-vignette);
-    color: grey;
-}
-.texte-vignette{
-    margin-left: map-get($margin-left, texte-vignette)
-}
+
 #section-principale{
     font-family: $font-main;
     font-weight: $font-weight;
     @include backgroundmaincolor;
     margin-top: map-get($margin-top, section);
     padding-top: 5%;
-    padding-bottom: 5%;        
-}
-.vignette-article-differentes{
-    @include backgroundmaincolor($colour-white);
-    border-radius: map-get($border-radius , vignette-article-differentes );
-    position: relative;
-    @include shadow-main;
-}
-#photo-plat-restaurant{
-    width: 100%;
-}
-.texte-sur-image{
-    position: absolute;
-    top:-2%;
-    right: 5%;
-    padding: 2%;
-    @include backgroundmaincolor($colour-tertiary);
-    color:$color-text-nouveau;
-    }   
-figure{
-    @include backgroundmaincolor($colour-white);
-    border-radius: map-get($border-radius, figure );
-    @include shadow-main;
-    figcaption{
-        margin-left: map-get($margin-left, h2 );
-        width: 85%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        h3{
-            margin-top: 2%;
-            margin-bottom: 1%;
-        }
-        .placement-coeurs{
+    padding-bottom: 5%;
+    h2{
+        margin-left: map-get($margin-left,h2);
+    }
+    #ensemble-vignette-article{
+        .vignette-article-differentes{
+            @include backgroundmaincolor($colour-white);
+            border-radius: map-get($border-radius , vignette-article-differentes );
             position: relative;
-            .icone-coeur-plein{
-                background: linear-gradient($colour-primary, $colour-secondary);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-size: 1.3rem;
-                cursor: pointer;
+            @include shadow-main;
+            #photo-plat-restaurant{
+                width: 100%;
+            }
+            .texte-sur-image{
                 position: absolute;
-                top:0;
-                right: 0;
-                bottom: 0;
-                left:0;
-                opacity:0;
-                transition: opacity 3s;
-                &:active{
-                    background:linear-gradient($colour-primary, $colour-secondary);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    opacity: 1;
-                    transition: opacity 1000ms;
+                top:-2%;
+                right: 5%;
+                padding: 2%;
+                @include backgroundmaincolor($colour-tertiary);
+                color:$color-text-nouveau;
+            }
+        }
+        figure{
+            @include backgroundmaincolor($colour-white);
+            border-radius: map-get($border-radius, figure );
+            @include shadow-main;
+            figcaption{
+                margin-left: map-get($margin-left, h2 );
+                width: 85%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                h3{
+                    margin-top: 2%;
+                    margin-bottom: 1%;
+                }
+                .placement-coeurs{
+                    position: relative;
+                    .icone-coeur-plein{
+                        background: linear-gradient($colour-primary, $colour-secondary);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                        position: absolute;
+                        top:0;
+                        right: 0;
+                        bottom: 0;
+                        left:0;
+                        opacity:0;
+                        transition: opacity 3s;
+                        &:active{
+                            background:linear-gradient($colour-primary, $colour-secondary);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            opacity: 1;
+                            transition: opacity 1000ms;
+                        }
+                    }
+                    .icone-coeur-vide{
+                        font-size: 1.3em;
+                        font-weight: 200;
+                        margin: 0%;
+                    }
+                }
+                .positionnement-text-vignette{
+                    font-weight: $font-weight-normal;
+                    width: 100%;
+                    margin-top: 1%;
                 }
             }
-            .icone-coeur-vide{
-                font-size: 1.3em;
-                font-weight: 200;
-                margin: 0%;
+        }
+
+    }        
+}
+#section-principale{
+    @include tablette1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h2{
+            margin-left: 8.5%;
+            width: 90%;
+        }
+    }
+        #ensemble-vignette-article{
+            @include tablette1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                figure{
+                    width: 35%;
+                }
             }
         }
-        .positionnement-text-vignette{
-            font-weight: $font-weight-normal;
-            width: 100%;
-            margin-top: 1%;
+}
+#section-principale{
+    @include tablette2{
+        h2{
+            width: 85%;
+            margin-left: 9.5%;
         }
     }
 }
+
+#section-principale{
+    @include tablette2{
+        h2{
+            width: 85%;
+            margin-left: 10.5%;
+        }
+    }
+}
+
+
     
     
     
