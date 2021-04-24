@@ -275,7 +275,7 @@ header .logo-header {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   #section-principale h2 {
     width: 85%;
     margin-left: 10.5%;
@@ -488,6 +488,11 @@ header .icone-fleche {
 }
 #section-menu .ensemble-vignettes-menu__entrees {
   animation: menu-apparitions 500ms;
+}
+@media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu__entrees .vignettes-menu {
+    width: 80%;
+  }
 }
 #section-menu .ensemble-vignettes-menu__plats {
   animation: menu-apparitions 500ms 500ms backwards;

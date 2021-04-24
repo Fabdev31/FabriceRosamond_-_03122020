@@ -180,6 +180,11 @@
         margin-top: 16%;
         &__entrees{
             animation: menu-apparitions 500ms ;
+            @include tablette1{
+                .vignettes-menu{
+                    width:80%;
+                }
+            }
         }
         &__plats{
             animation: menu-apparitions 500ms 500ms backwards;
@@ -239,35 +244,35 @@
             }
             .vignettes-menu-text{
                 display: flex;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    /*flex-direction: row;
-                    flex-wrap: wrap;*/
-                    justify-content:space-between;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                /*flex-direction: row;
+                flex-wrap: wrap;*/
+                justify-content:space-between;
+                width: 100%;
+                h3{
                     width: 100%;
-                    h3{
-                        width: 100%;
+                    margin-left: 5%;
+                }
+                .description-menu{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    width: 100%;
+                    .texte-vignette{
                         margin-left: 5%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
-                    .description-menu{
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        justify-content: space-between;
-                        width: 100%;
-                        .texte-vignette{
-                            margin-left: 5%;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-                        .dernier-element-vignette{
-                            margin-right: 5%;
-                        }
+                    .dernier-element-vignette{
+                        margin-right: 5%;
                     }
                 }
             }
-            .positionnement-bouton-menu{
+        }       
+        .positionnement-bouton-menu{
                 text-align: center;
                 button{
                     @include shadow-main;
@@ -276,6 +281,8 @@
                         @include shadow-hover;
                     } 
                 }
-            }
+        }
     }  
 }
+
+    
