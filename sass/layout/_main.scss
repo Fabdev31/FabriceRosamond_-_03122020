@@ -208,6 +208,9 @@
             width: 100%;
             cursor: pointer;
             overflow-x: hidden;
+            @include tablette1{
+                width:80%;
+            }
             &:active > .vignettes-menu-form-cercle{
                 transform-origin: right;
                 transform: translateX(0%);
