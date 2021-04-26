@@ -74,6 +74,12 @@ header{
             @include backgroundmaincolor;
             @include shadow-main;
             font-size: map-get($font-size,vignette-menu-nav);
+            @include tablette1{
+                width: 50%;
+            }
+            @include desktop{
+                width: 50%;
+            }
             &:hover{
                 background-color: lighten($color: $colour-primary, $amount: 30%);
             }
@@ -107,10 +113,11 @@ header{
     margin-top: map-get($margin-top, section);
     padding-top: 5%;
     padding-bottom: 5%;
-    h2{
-        margin-left: map-get($margin-left,h2);
-    }
+
     #ensemble-vignette-article{
+        h2{
+            margin-left: map-get($margin-left,h2);
+        }
         .vignette-article-differentes{
             @include backgroundmaincolor($colour-white);
             border-radius: map-get($border-radius , vignette-article-differentes );
@@ -160,6 +167,15 @@ header{
                         left:0;
                         opacity:0;
                         transition: opacity 3s;
+                        @include desktop{
+                        &:hover{
+                            background:linear-gradient($colour-primary, $colour-secondary);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            opacity: 1;
+                            transition: opacity 1000ms;
+                        }
+                        }
                         &:active{
                             background:linear-gradient($colour-primary, $colour-secondary);
                             -webkit-background-clip: text;

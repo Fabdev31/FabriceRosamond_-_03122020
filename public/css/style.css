@@ -140,6 +140,16 @@ header .logo-header {
   box-shadow: 0px 7px 5px #d2d2d2;
   font-size: 1rem;
 }
+@media screen and (min-width: 651px) {
+  #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
+    width: 50%;
+  }
+}
 #section-nav .ensemble-vignettes-nav .vignette-menu-nav:hover {
   background-color: #e4d5f6;
 }
@@ -171,7 +181,7 @@ header .logo-header {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-#section-principale h2 {
+#section-principale #ensemble-vignette-article h2 {
   margin-left: 8%;
 }
 #section-principale #ensemble-vignette-article .vignette-article-differentes {
@@ -226,6 +236,15 @@ header .logo-header {
   left: 0;
   opacity: 0;
   transition: opacity 3s;
+}
+@media screen and (min-width: 1025px) {
+  #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: opacity 1000ms;
+  }
 }
 #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:active {
   background: linear-gradient(#9356DC, #FF79DA);
@@ -454,6 +473,15 @@ header .icone-fleche {
   opacity: 0;
   transition: opacity 1000ms;
 }
+@media screen and (min-width: 1025px) {
+  #presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-plein:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+}
 #presentation-restaurant .presentation-restaurant .placement-coeurs .icone-coeur-plein:active {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -486,19 +514,41 @@ header .icone-fleche {
   align-content: center;
   margin-top: 16%;
 }
+@media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu {
+    align-items: center;
+    width: 80%;
+  }
+}
 #section-menu .ensemble-vignettes-menu__entrees {
   animation: menu-apparitions 500ms;
 }
+@media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu__entrees .positionnement-vignettes {
+    display: flex;
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 651px) {
-  #section-menu .ensemble-vignettes-menu__entrees .vignettes-menu {
+  #section-menu .ensemble-vignettes-menu__entrees {
     width: 80%;
   }
 }
 #section-menu .ensemble-vignettes-menu__plats {
   animation: menu-apparitions 500ms 500ms backwards;
 }
+@media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu__plats {
+    width: 80%;
+  }
+}
 #section-menu .ensemble-vignettes-menu__desserts {
   animation: menu-apparitions 500ms 1000ms backwards;
+}
+@media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu__desserts {
+    width: 80%;
+  }
 }
 #section-menu .ensemble-vignettes-menu .positionnement-titre-article {
   font-weight: 300;
@@ -517,9 +567,16 @@ header .icone-fleche {
   cursor: pointer;
   overflow-x: hidden;
 }
-@media screen and (min-width: 651px) {
-  #section-menu .ensemble-vignettes-menu .vignettes-menu {
-    width: 80%;
+@media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu .vignettes-menu:hover > .vignettes-menu-form-cercle {
+    transform-origin: right;
+    transform: translateX(0%);
+    transition: all 500ms;
+    width: 20%;
+  }
+  #section-menu .ensemble-vignettes-menu .vignettes-menu:hover .icone-validation {
+    transform: rotate(0deg);
+    transition: transform 500ms;
   }
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu:active > .vignettes-menu-form-cercle {
