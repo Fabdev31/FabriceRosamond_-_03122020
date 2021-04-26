@@ -7,74 +7,13 @@
         opacity: 1;
     }
 }
-@keyframes encoche-aller{
-    from{
-        transform: translateX(0%);
-    }
-    to{
-        transform:translateX(100%);
-    }
-}
-@keyframes encoche-retour{
-    from{
-        transform: translateX(100%);
-    }
-    to{
-        transform: translateX(0%);
-    }
-}
-@keyframes remplissage-coeur{
-    0%{
-        transform: scale(0);
-    }
-    25%{
-        transform: scale(.5);
-    }
-    50%{
-        transform: scale(1);
-    }
-}
-@keyframes loader1{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-    75%{
-        opacity: 1;
-    }
-    100%{
-        opacity:0 ;
-    }
-}
-@keyframes loader-2{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-    75%{
-        opacity: 1;
-    }
-    100%{
-        opacity:0;
-    }
-}
 #bloc-page{
     height: 1000px;
     @include tablette1{
         font-size: 110%;
     }
     @include desktop{
-        font-size: 160%;
+        font-size: 140%;
     }
 }
 #presentation-restaurant{
@@ -125,6 +64,7 @@
                     opacity:0;
                     transition: opacity 1000ms;
                     @include desktop{
+                        font-size: 130%;
                     &:hover{
                         background:linear-gradient($colour-primary, $colour-secondary);
                         -webkit-background-clip: text;
@@ -168,25 +108,25 @@
         margin-top: 16%;
         @include tablette1{
             align-items: center;
-            width: 80%;
+            width: 85%;
         }
         @include desktop{
             width: 70%;
         }
         &__entrees{
-            animation: menu-apparitions 500ms;
+            animation: menu-apparitions 2000ms 1s backwards;
             @include tablette1{
                 width:80%;
             }
         }
         &__plats{
-            animation: menu-apparitions 500ms 500ms backwards;
+            animation: menu-apparitions 500ms 2000ms backwards;
             @include tablette1{
                 width:80%;
             }
         }
         &__desserts{
-            animation: menu-apparitions 500ms 1000ms backwards;
+            animation: menu-apparitions 500ms 2500ms backwards;
             @include tablette1{
                 width:80%;
             }

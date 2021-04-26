@@ -3,6 +3,18 @@
 @import "../components/buttons";
 @import "../base/typography";
 
+@keyframes apparition-bloc{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @keyframes loader1{
     0%{
         opacity: 0;
@@ -37,10 +49,9 @@
         opacity:0;
     }
 }
-
-#bloc-page{
-        width: 100%;
-        .loader{
+body{
+    .load{
+        &__loader{
             border-top-left-radius: 150px;
             border-top-right-radius: 150px;
             border-bottom-right-radius: 150px;
@@ -50,12 +61,12 @@
             position: fixed;
             top: 10%;
             right: 10%;
-            z-index: 3;
+            z-index: -1;
             width: 80%;
             height: 300px;
-            animation:loader1 1s 3 both;
+            animation:loader1 1s 2 both;
         }
-        .loader2{
+        &__loader2{
             border-top-left-radius: 150px;
             border-top-right-radius: 150px;
             border-bottom-right-radius: 150px;
@@ -65,12 +76,17 @@
             position: fixed;
             top: 14%;
             right: 20%;
-            z-index: 3;
+            z-index: -1;
             width: 60%;
             height: 230px;
-            animation:loader-2 1s 250ms 3 both;
+            animation:loader-2 1s 250ms 2 both;
         }
+    }
+}
 
+#bloc-page{
+    animation: apparition-bloc 2s backwards;
+}
     img{
         width: 100%;
         object-fit: contain;
@@ -80,6 +96,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+
         .logo-header {
             margin-top: 5%;
             width: 30%;
@@ -241,16 +258,8 @@
                             left:0;
                             opacity:0;
                             transition: opacity 3s;
-                            @include tablette1{
-                            &:hover{
-                                background:linear-gradient($colour-primary, $colour-secondary);
-                                -webkit-background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                                opacity: 1;
-                                transition: opacity 1000ms;
-                            }
-                            }
                             @include desktop{
+                                font-size: 130%;
                             &:hover{
                                 background:linear-gradient($colour-primary, $colour-secondary);
                                 -webkit-background-clip: text;
@@ -313,7 +322,6 @@
             }
         }
     }
-
     #section-principale{
         @include tablette3{
             h2{
@@ -322,7 +330,6 @@
             }
         }
     }
-}
 
 
     
