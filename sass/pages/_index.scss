@@ -3,6 +3,74 @@
 @import "../components/buttons";
 @import "../base/typography";
 
+@keyframes loader1{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0 ;
+    }
+}
+@keyframes loader-2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+#bloc-page{
+    width: 100%;
+    .loader{
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+        border-bottom-right-radius: 150px;
+        border-bottom-left-radius: 150px;
+        border:$colour-primary dashed 10px;
+        color: $colour-tertiary;
+        position: fixed;
+        top: 10%;
+        right: 10%;
+        z-index: 3;
+        width: 80%;
+        height: 300px;
+        animation:loader1 1s 3 both;
+    }
+    .loader2{
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+        border-bottom-right-radius: 150px;
+        border-bottom-left-radius: 150px;
+        border:$colour-secondary dashed 10px;
+        color: $colour-primary;
+        position: fixed;
+        top: 14%;
+        right: 20%;
+        z-index: 3;
+        width: 60%;
+        height: 230px;
+        animation:loader-2 1s 250ms 3 both;
+    }
+}
 img{
     width: 100%;
     object-fit: contain;
@@ -76,9 +144,11 @@ header{
             font-size: map-get($font-size,vignette-menu-nav);
             @include tablette1{
                 width: 50%;
+                font-size: 110%;
             }
             @include desktop{
                 width: 50%;
+                font-size: 120%;
             }
             &:hover{
                 background-color: lighten($color: $colour-primary, $amount: 30%);
@@ -217,7 +287,7 @@ header{
                 flex-wrap: wrap;
                 justify-content: center;
                 figure{
-                    width: 35%;
+                    width: 37%;
                 }
             }
         }

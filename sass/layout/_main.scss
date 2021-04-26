@@ -70,35 +70,11 @@
 }
 #bloc-page{
     height: 1000px;
-    .loader{
-        border-top-left-radius: 150px;
-        border-top-right-radius: 150px;
-        border-bottom-right-radius: 150px;
-        border-bottom-left-radius: 150px;
-        border:$colour-primary dashed 10px;
-        color: $colour-tertiary;
-        position: fixed;
-        top: 10%;
-        right: 10%;
-        z-index: 3;
-        width: 80%;
-        height: 300px;
-        animation:loader1 1s 3 both;
+    @include tablette1{
+        font-size: 110%;
     }
-    .loader2{
-        border-top-left-radius: 150px;
-        border-top-right-radius: 150px;
-        border-bottom-right-radius: 150px;
-        border-bottom-left-radius: 150px;
-        border:$colour-secondary dashed 10px;
-        color: $colour-primary;
-        position: fixed;
-        top: 14%;
-        right: 20%;
-        z-index: 3;
-        width: 60%;
-        height: 230px;
-        animation:loader-2 1s 250ms 3 both;
+    @include desktop{
+        font-size: 160%;
     }
 }
 #presentation-restaurant{
@@ -126,6 +102,9 @@
             padding-bottom: 0%;
             padding-top: 5%;
             margin-top: 9%;
+            @include desktop{
+                padding-bottom: 5%;
+            }
             h1{
                 margin-left: 5%;
             }
@@ -191,18 +170,14 @@
             align-items: center;
             width: 80%;
         }
+        @include desktop{
+            width: 70%;
+        }
         &__entrees{
             animation: menu-apparitions 500ms;
-            & .positionnement-vignettes{
-                @include desktop{
-                    display: flex;
-                    flex-direction: row;
-                }
-            }
             @include tablette1{
                 width:80%;
             }
-            
         }
         &__plats{
             animation: menu-apparitions 500ms 500ms backwards;
@@ -220,6 +195,8 @@
             font-weight: $font-weight-light;
             text-align: left;
             margin-left: 3%;
+            border-bottom: $colour-tertiary 2px solid;
+            width: 4rem;
         }
         .vignettes-menu{
             display: flex;

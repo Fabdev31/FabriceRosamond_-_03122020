@@ -61,11 +61,80 @@ button {
   border-style: none;
   margin-bottom: 10%;
   box-shadow: 0px 2px 2px black;
+  font-size: 100%;
 }
 
 @font-face {
   font-family: "Roboto", "Shrikhand";
 }
+@keyframes loader1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader-2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#bloc-page {
+  width: 100%;
+}
+#bloc-page .loader {
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border: #9356DC dashed 10px;
+  color: #99E2D0;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  z-index: 3;
+  width: 80%;
+  height: 300px;
+  animation: loader1 1s 3 both;
+}
+#bloc-page .loader2 {
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border: #FF79DA dashed 10px;
+  color: #9356DC;
+  position: fixed;
+  top: 14%;
+  right: 20%;
+  z-index: 3;
+  width: 60%;
+  height: 230px;
+  animation: loader-2 1s 250ms 3 both;
+}
+
 img {
   width: 100%;
   object-fit: contain;
@@ -143,11 +212,13 @@ header .logo-header {
 @media screen and (min-width: 651px) {
   #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
     width: 50%;
+    font-size: 110%;
   }
 }
 @media screen and (min-width: 1025px) {
   #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
     width: 50%;
+    font-size: 120%;
   }
 }
 #section-nav .ensemble-vignettes-nav .vignette-menu-nav:hover {
@@ -283,7 +354,7 @@ header .logo-header {
     justify-content: center;
   }
   #section-principale #ensemble-vignette-article figure {
-    width: 35%;
+    width: 37%;
   }
 }
 
@@ -394,35 +465,15 @@ header .icone-fleche {
 #bloc-page {
   height: 1000px;
 }
-#bloc-page .loader {
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
-  border-bottom-left-radius: 150px;
-  border: #9356DC dashed 10px;
-  color: #99E2D0;
-  position: fixed;
-  top: 10%;
-  right: 10%;
-  z-index: 3;
-  width: 80%;
-  height: 300px;
-  animation: loader1 1s 3 both;
+@media screen and (min-width: 651px) {
+  #bloc-page {
+    font-size: 110%;
+  }
 }
-#bloc-page .loader2 {
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
-  border-bottom-left-radius: 150px;
-  border: #FF79DA dashed 10px;
-  color: #9356DC;
-  position: fixed;
-  top: 14%;
-  right: 20%;
-  z-index: 3;
-  width: 60%;
-  height: 230px;
-  animation: loader-2 1s 250ms 3 both;
+@media screen and (min-width: 1025px) {
+  #bloc-page {
+    font-size: 160%;
+  }
 }
 
 #presentation-restaurant {
@@ -451,6 +502,11 @@ header .icone-fleche {
   padding-bottom: 0%;
   padding-top: 5%;
   margin-top: 9%;
+}
+@media screen and (min-width: 1025px) {
+  #presentation-restaurant .presentation-restaurant {
+    padding-bottom: 5%;
+  }
 }
 #presentation-restaurant .presentation-restaurant h1 {
   margin-left: 5%;
@@ -520,14 +576,13 @@ header .icone-fleche {
     width: 80%;
   }
 }
+@media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu {
+    width: 70%;
+  }
+}
 #section-menu .ensemble-vignettes-menu__entrees {
   animation: menu-apparitions 500ms;
-}
-@media screen and (min-width: 1025px) {
-  #section-menu .ensemble-vignettes-menu__entrees .positionnement-vignettes {
-    display: flex;
-    flex-direction: row;
-  }
 }
 @media screen and (min-width: 651px) {
   #section-menu .ensemble-vignettes-menu__entrees {
@@ -554,6 +609,8 @@ header .icone-fleche {
   font-weight: 300;
   text-align: left;
   margin-left: 3%;
+  border-bottom: #99E2D0 2px solid;
+  width: 4rem;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu {
   display: flex;
@@ -716,6 +773,7 @@ button {
   border-style: none;
   margin-bottom: 10%;
   box-shadow: 0px 2px 2px black;
+  font-size: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
