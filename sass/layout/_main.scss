@@ -40,7 +40,7 @@
             @include backgroundmaincolor($color-light-grey);
             padding-bottom: 0%;
             padding-top: 5%;
-            margin-top: 9%;
+            margin-top: 11%;
             @include desktop{
                 padding-bottom: 5%;
             }
@@ -204,8 +204,11 @@
                 justify-content:space-between;
                 width: 100%;
                 h3{
-                    width: 100%;
+                    width: 85%;
                     margin-left: 5%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 .description-menu{
                     display: flex;

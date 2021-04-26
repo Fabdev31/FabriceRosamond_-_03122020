@@ -150,6 +150,7 @@ body .load__loader2 {
 
 #bloc-page {
   animation: apparition-bloc 2s backwards;
+  font-size: 100%;
 }
 
 img {
@@ -507,7 +508,7 @@ header .icone-fleche {
   background-color: #f6f6f6;
   padding-bottom: 0%;
   padding-top: 5%;
-  margin-top: 9%;
+  margin-top: 11%;
 }
 @media screen and (min-width: 1025px) {
   #presentation-restaurant .presentation-restaurant {
@@ -689,8 +690,11 @@ header .icone-fleche {
   width: 100%;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text h3 {
-  width: 100%;
+  width: 85%;
   margin-left: 5%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text .description-menu {
   display: flex;
