@@ -39,273 +39,287 @@
 }
 
 #bloc-page{
-    width: 100%;
-    .loader{
-        border-top-left-radius: 150px;
-        border-top-right-radius: 150px;
-        border-bottom-right-radius: 150px;
-        border-bottom-left-radius: 150px;
-        border:$colour-primary dashed 10px;
-        color: $colour-tertiary;
-        position: fixed;
-        top: 10%;
-        right: 10%;
-        z-index: 3;
-        width: 80%;
-        height: 300px;
-        animation:loader1 1s 3 both;
-    }
-    .loader2{
-        border-top-left-radius: 150px;
-        border-top-right-radius: 150px;
-        border-bottom-right-radius: 150px;
-        border-bottom-left-radius: 150px;
-        border:$colour-secondary dashed 10px;
-        color: $colour-primary;
-        position: fixed;
-        top: 14%;
-        right: 20%;
-        z-index: 3;
-        width: 60%;
-        height: 230px;
-        animation:loader-2 1s 250ms 3 both;
-    }
-}
-img{
-    width: 100%;
-    object-fit: contain;
-    border-radius: 25px 25px 0px 0px;
-}
-header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .logo-header {
-        margin-top: 5%;
-        width: 30%;
-        border-radius: 0%;
-    }
-}
+        width: 100%;
+        .loader{
+            border-top-left-radius: 150px;
+            border-top-right-radius: 150px;
+            border-bottom-right-radius: 150px;
+            border-bottom-left-radius: 150px;
+            border:$colour-primary dashed 10px;
+            color: $colour-tertiary;
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            z-index: 3;
+            width: 80%;
+            height: 300px;
+            animation:loader1 1s 3 both;
+        }
+        .loader2{
+            border-top-left-radius: 150px;
+            border-top-right-radius: 150px;
+            border-bottom-right-radius: 150px;
+            border-bottom-left-radius: 150px;
+            border:$colour-secondary dashed 10px;
+            color: $colour-primary;
+            position: fixed;
+            top: 14%;
+            right: 20%;
+            z-index: 3;
+            width: 60%;
+            height: 230px;
+            animation:loader-2 1s 250ms 3 both;
+        }
 
-#section-recherche {
-    font-size: map-get($font-size,section-recherche);
-    @include backgroundmaincolor;
-    font-family: 'Roboto';
-    text-align: center;
-    padding-bottom: 8%;
-    .section-recherche{
-        @include backgroundmaincolor($color-deep-grey);
-        padding-top: 3%;
-        padding-bottom: 3%;
-        font-size: map-get($font-size,vignette-menu-nav);
-        font-weight:500;
+    img{
+        width: 100%;
+        object-fit: contain;
+        border-radius: 25px 25px 0px 0px;
     }
-    h1{
-        width: 80%;
-        margin-left: 10%;
-        font-weight: 500;
-    }
-    .sous-titre{
-        width: 90%;
-        margin-left: 5%;
-        font-weight: 200;  
-    }
-    button{
-        @include shadow-main;
-        &:hover{
-            filter:brightness(1.2);
-            @include shadow-hover;
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .logo-header {
+            margin-top: 5%;
+            width: 30%;
+            border-radius: 0%;
         }
     }
-}
-#section-nav{
-    font-family: $font-main;
-    font-weight:$font-weight;
-    margin-top: map-get($margin-top,section);
-    h2{
-        margin-left: map-get($margin-left,h2);
-        width: 90%;
-    }
-    .ensemble-vignettes-nav{
-        .vignette-menu-nav{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content:flex-start;
-            width: 80%;
-            border-radius: 15px;
-            position: relative;
-            margin-left: 10%;
-            margin-bottom: 5%;
+    #section-recherche {
+        font-size: map-get($font-size,section-recherche);
+        @include backgroundmaincolor;
+        font-family: 'Roboto';
+        text-align: center;
+        padding-bottom: 8%;
+        @include desktop{
+            font-size: 130%;
+        }
+        .section-recherche{
+            @include backgroundmaincolor($color-deep-grey);
             padding-top: 3%;
             padding-bottom: 3%;
-            @include backgroundmaincolor;
-            @include shadow-main;
             font-size: map-get($font-size,vignette-menu-nav);
-            @include tablette1{
-                width: 50%;
-                font-size: 110%;
-            }
+            font-weight:500;
             @include desktop{
-                width: 50%;
-                font-size: 120%;
+                font-size: 100%;
             }
+        }
+        h1{
+            width: 80%;
+            margin-left: 10%;
+            font-weight: 500;
+        }
+        .sous-titre{
+            width: 90%;
+            margin-left: 5%;
+            font-weight: 200;  
+        }
+        button{
+            @include shadow-main;
             &:hover{
-                background-color: lighten($color: $colour-primary, $amount: 30%);
-            }
-            &:hover > .element-vignette{
-                color: $colour-primary;
-            }
-            .numero-vignette{
-                position: absolute;
-                left: -1rem;
-                border-radius: 25px;
-                @include backgroundmaincolor($colour-primary);
-                padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-                color: $colour-white;
-                font-size: 0.8em;
-            }
-            .element-vignette{
-                margin-left: map-get($margin-left, element-vignette);
-                color: grey;
-            }
-            .texte-vignette{
-                margin-left: map-get($margin-left, texte-vignette)
+                filter:brightness(1.2);
+                @include shadow-hover;
             }
         }
     }
-}
-
-#section-principale{
-    font-family: $font-main;
-    font-weight: $font-weight;
-    @include backgroundmaincolor;
-    margin-top: map-get($margin-top, section);
-    padding-top: 5%;
-    padding-bottom: 5%;
-
-    #ensemble-vignette-article{
+    #section-nav{
+        font-family: $font-main;
+        font-weight:$font-weight;
+        margin-top: map-get($margin-top,section);
         h2{
             margin-left: map-get($margin-left,h2);
-        }
-        .vignette-article-differentes{
-            @include backgroundmaincolor($colour-white);
-            border-radius: map-get($border-radius , vignette-article-differentes );
-            position: relative;
-            @include shadow-main;
-            #photo-plat-restaurant{
-                width: 100%;
-            }
-            .texte-sur-image{
-                position: absolute;
-                top:-2%;
-                right: 5%;
-                padding: 2%;
-                @include backgroundmaincolor($colour-tertiary);
-                color:$color-text-nouveau;
-            }
-        }
-        figure{
-            @include backgroundmaincolor($colour-white);
-            border-radius: map-get($border-radius, figure );
-            @include shadow-main;
-            figcaption{
-                margin-left: map-get($margin-left, h2 );
-                width: 85%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                align-content: center;
-                flex-direction: row;
-                flex-wrap: wrap;
-                h3{
-                    margin-top: 2%;
-                    margin-bottom: 1%;
-                }
-                .placement-coeurs{
-                    position: relative;
-                    .icone-coeur-plein{
-                        background: linear-gradient($colour-primary, $colour-secondary);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        font-size: 1.3rem;
-                        cursor: pointer;
-                        position: absolute;
-                        top:0;
-                        right: 0;
-                        bottom: 0;
-                        left:0;
-                        opacity:0;
-                        transition: opacity 3s;
-                        @include desktop{
-                        &:hover{
-                            background:linear-gradient($colour-primary, $colour-secondary);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            opacity: 1;
-                            transition: opacity 1000ms;
-                        }
-                        }
-                        &:active{
-                            background:linear-gradient($colour-primary, $colour-secondary);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            opacity: 1;
-                            transition: opacity 1000ms;
-                        }
-                    }
-                    .icone-coeur-vide{
-                        font-size: 1.3em;
-                        font-weight: 200;
-                        margin: 0%;
-                    }
-                }
-                .positionnement-text-vignette{
-                    font-weight: $font-weight-normal;
-                    width: 100%;
-                    margin-top: 1%;
-                }
-            }
-        }
-
-    }        
-}
-#section-principale{
-    @include tablette1{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        h2{
-            margin-left: 8.5%;
             width: 90%;
         }
-    }
-        #ensemble-vignette-article{
-            @include tablette1{
+        .ensemble-vignettes-nav{
+            .vignette-menu-nav{
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                figure{
-                    width: 37%;
+                align-items: center;
+                justify-content:flex-start;
+                width: 80%;
+                border-radius: 15px;
+                position: relative;
+                margin-left: 10%;
+                margin-bottom: 5%;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                @include backgroundmaincolor;
+                @include shadow-main;
+                font-size: map-get($font-size,vignette-menu-nav);
+                @include tablette1{
+                    width: 50%;
+                    font-size: 110%;
+                }
+                @include desktop{
+                    width: 50%;
+                    font-size: 120%;
+                }
+                &:hover{
+                    background-color: lighten($color: $colour-primary, $amount: 30%);
+                }
+                &:hover > .element-vignette{
+                    color: $colour-primary;
+                }
+                .numero-vignette{
+                    position: absolute;
+                    left: -1rem;
+                    border-radius: 25px;
+                    @include backgroundmaincolor($colour-primary);
+                    padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+                    color: $colour-white;
+                    font-size: 0.8em;
+                }
+                .element-vignette{
+                    margin-left: map-get($margin-left, element-vignette);
+                    color: grey;
+                }
+                .texte-vignette{
+                    margin-left: map-get($margin-left, texte-vignette)
                 }
             }
         }
-}
-#section-principale{
-    @include tablette2{
-        h2{
-            width: 85%;
-            margin-left: 9.5%;
+    }
+
+    #section-principale{
+        font-family: $font-main;
+        font-weight: $font-weight;
+        @include backgroundmaincolor;
+        margin-top: map-get($margin-top, section);
+        padding-top: 5%;
+        padding-bottom: 5%;
+        #ensemble-vignette-article{
+            h2{
+                margin-left: map-get($margin-left,h2);
+            }
+            .vignette-article-differentes{
+                @include backgroundmaincolor($colour-white);
+                border-radius: map-get($border-radius , vignette-article-differentes );
+                position: relative;
+                @include shadow-main;
+                #photo-plat-restaurant{
+                    width: 100%;
+                }
+                .texte-sur-image{
+                    position: absolute;
+                    top:-2%;
+                    right: 5%;
+                    padding: 2%;
+                    @include backgroundmaincolor($colour-tertiary);
+                    color:$color-text-nouveau;
+                }
+            }
+            figure{
+                @include backgroundmaincolor($colour-white);
+                border-radius: map-get($border-radius, figure );
+                @include shadow-main;
+                figcaption{
+                    margin-left: map-get($margin-left, h2 );
+                    width: 85%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    h3{
+                        margin-top: 2%;
+                        margin-bottom: 1%;
+                    }
+                    .placement-coeurs{
+                        position: relative;
+                        .icone-coeur-plein{
+                            background: linear-gradient($colour-primary, $colour-secondary);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-size: 1.3rem;
+                            cursor: pointer;
+                            position: absolute;
+                            top:0;
+                            right: 0;
+                            bottom: 0;
+                            left:0;
+                            opacity:0;
+                            transition: opacity 3s;
+                            @include tablette1{
+                            &:hover{
+                                background:linear-gradient($colour-primary, $colour-secondary);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                opacity: 1;
+                                transition: opacity 1000ms;
+                            }
+                            }
+                            @include desktop{
+                            &:hover{
+                                background:linear-gradient($colour-primary, $colour-secondary);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                opacity: 1;
+                                transition: opacity 1000ms;
+                            }
+                            }
+                            &:active{
+                                background:linear-gradient($colour-primary, $colour-secondary);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                opacity: 1;
+                                transition: opacity 1000ms;
+                            }
+                        }
+                        .icone-coeur-vide{
+                            font-size: 1.3em;
+                            font-weight: 200;
+                            margin: 0%;
+                        }
+                    }
+                    .positionnement-text-vignette{
+                        font-weight: $font-weight-normal;
+                        width: 100%;
+                        margin-top: 1%;
+                    }
+                }
+            }
+
+        }        
+    }
+    #section-principale{
+        @include tablette1{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h2{
+                margin-left: 8.5%;
+                width: 90%;
+            }
+        }
+            #ensemble-vignette-article{
+                @include tablette1{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    figure{
+                        width: 37%;
+                    }
+                }
+            }
+    }
+    #section-principale{
+        @include tablette2{
+            h2{
+                width: 85%;
+                margin-left: 9.5%;
+            }
         }
     }
-}
 
-#section-principale{
-    @include tablette3{
-        h2{
-            width: 85%;
-            margin-left: 10.5%;
+    #section-principale{
+        @include tablette3{
+            h2{
+                width: 85%;
+                margin-left: 10.5%;
+            }
         }
     }
 }

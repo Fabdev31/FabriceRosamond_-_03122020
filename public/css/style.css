@@ -134,66 +134,72 @@ button {
   height: 230px;
   animation: loader-2 1s 250ms 3 both;
 }
-
-img {
+#bloc-page img {
   width: 100%;
   object-fit: contain;
   border-radius: 25px 25px 0px 0px;
 }
-
-header {
+#bloc-page header {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-header .logo-header {
+#bloc-page header .logo-header {
   margin-top: 5%;
   width: 30%;
   border-radius: 0%;
 }
-
-#section-recherche {
+#bloc-page #section-recherche {
   font-size: 1.5rem;
   background-color: #f6f6f6;
   font-family: "Roboto";
   text-align: center;
   padding-bottom: 8%;
 }
-#section-recherche .section-recherche {
+@media screen and (min-width: 1025px) {
+  #bloc-page #section-recherche {
+    font-size: 130%;
+  }
+}
+#bloc-page #section-recherche .section-recherche {
   background-color: #ebebeb;
   padding-top: 3%;
   padding-bottom: 3%;
   font-size: 1rem;
   font-weight: 500;
 }
-#section-recherche h1 {
+@media screen and (min-width: 1025px) {
+  #bloc-page #section-recherche .section-recherche {
+    font-size: 100%;
+  }
+}
+#bloc-page #section-recherche h1 {
   width: 80%;
   margin-left: 10%;
   font-weight: 500;
 }
-#section-recherche .sous-titre {
+#bloc-page #section-recherche .sous-titre {
   width: 90%;
   margin-left: 5%;
   font-weight: 200;
 }
-#section-recherche button {
+#bloc-page #section-recherche button {
   box-shadow: 0px 7px 5px #d2d2d2;
 }
-#section-recherche button:hover {
+#bloc-page #section-recherche button:hover {
   filter: brightness(1.2);
   box-shadow: 0px 10px 10px #6c6c6c;
 }
-
-#section-nav {
+#bloc-page #section-nav {
   font-family: "Roboto";
   font-weight: 900;
   margin-top: 10%;
 }
-#section-nav h2 {
+#bloc-page #section-nav h2 {
   margin-left: 8%;
   width: 90%;
 }
-#section-nav .ensemble-vignettes-nav .vignette-menu-nav {
+#bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -210,24 +216,24 @@ header .logo-header {
   font-size: 1rem;
 }
 @media screen and (min-width: 651px) {
-  #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
+  #bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
     width: 50%;
     font-size: 110%;
   }
 }
 @media screen and (min-width: 1025px) {
-  #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
+  #bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav {
     width: 50%;
     font-size: 120%;
   }
 }
-#section-nav .ensemble-vignettes-nav .vignette-menu-nav:hover {
+#bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav:hover {
   background-color: #e4d5f6;
 }
-#section-nav .ensemble-vignettes-nav .vignette-menu-nav:hover > .element-vignette {
+#bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav:hover > .element-vignette {
   color: #9356DC;
 }
-#section-nav .ensemble-vignettes-nav .vignette-menu-nav .numero-vignette {
+#bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav .numero-vignette {
   position: absolute;
   left: -1rem;
   border-radius: 25px;
@@ -236,15 +242,14 @@ header .logo-header {
   color: #fff;
   font-size: 0.8em;
 }
-#section-nav .ensemble-vignettes-nav .vignette-menu-nav .element-vignette {
+#bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav .element-vignette {
   margin-left: 10%;
   color: grey;
 }
-#section-nav .ensemble-vignettes-nav .vignette-menu-nav .texte-vignette {
+#bloc-page #section-nav .ensemble-vignettes-nav .vignette-menu-nav .texte-vignette {
   margin-left: 10%;
 }
-
-#section-principale {
+#bloc-page #section-principale {
   font-family: "Roboto";
   font-weight: 900;
   background-color: #f6f6f6;
@@ -252,19 +257,19 @@ header .logo-header {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-#section-principale #ensemble-vignette-article h2 {
+#bloc-page #section-principale #ensemble-vignette-article h2 {
   margin-left: 8%;
 }
-#section-principale #ensemble-vignette-article .vignette-article-differentes {
+#bloc-page #section-principale #ensemble-vignette-article .vignette-article-differentes {
   background-color: #fff;
   border-radius: 25px;
   position: relative;
   box-shadow: 0px 7px 5px #d2d2d2;
 }
-#section-principale #ensemble-vignette-article .vignette-article-differentes #photo-plat-restaurant {
+#bloc-page #section-principale #ensemble-vignette-article .vignette-article-differentes #photo-plat-restaurant {
   width: 100%;
 }
-#section-principale #ensemble-vignette-article .vignette-article-differentes .texte-sur-image {
+#bloc-page #section-principale #ensemble-vignette-article .vignette-article-differentes .texte-sur-image {
   position: absolute;
   top: -2%;
   right: 5%;
@@ -272,12 +277,12 @@ header .logo-header {
   background-color: #99E2D0;
   color: #008864;
 }
-#section-principale #ensemble-vignette-article figure {
+#bloc-page #section-principale #ensemble-vignette-article figure {
   background-color: #fff;
   border-radius: 25px;
   box-shadow: 0px 7px 5px #d2d2d2;
 }
-#section-principale #ensemble-vignette-article figure figcaption {
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption {
   margin-left: 8%;
   width: 85%;
   display: flex;
@@ -287,14 +292,14 @@ header .logo-header {
   flex-direction: row;
   flex-wrap: wrap;
 }
-#section-principale #ensemble-vignette-article figure figcaption h3 {
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption h3 {
   margin-top: 2%;
   margin-bottom: 1%;
 }
-#section-principale #ensemble-vignette-article figure figcaption .placement-coeurs {
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs {
   position: relative;
 }
-#section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein {
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -308,8 +313,8 @@ header .logo-header {
   opacity: 0;
   transition: opacity 3s;
 }
-@media screen and (min-width: 1025px) {
-  #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:hover {
+@media screen and (min-width: 651px) {
+  #bloc-page #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:hover {
     background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -317,56 +322,62 @@ header .logo-header {
     transition: opacity 1000ms;
   }
 }
-#section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:active {
+@media screen and (min-width: 1025px) {
+  #bloc-page #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: opacity 1000ms;
+  }
+}
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-plein:active {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
   transition: opacity 1000ms;
 }
-#section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-vide {
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption .placement-coeurs .icone-coeur-vide {
   font-size: 1.3em;
   font-weight: 200;
   margin: 0%;
 }
-#section-principale #ensemble-vignette-article figure figcaption .positionnement-text-vignette {
+#bloc-page #section-principale #ensemble-vignette-article figure figcaption .positionnement-text-vignette {
   font-weight: 400;
   width: 100%;
   margin-top: 1%;
 }
-
 @media screen and (min-width: 651px) {
-  #section-principale {
+  #bloc-page #section-principale {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  #section-principale h2 {
+  #bloc-page #section-principale h2 {
     margin-left: 8.5%;
     width: 90%;
   }
 }
 @media screen and (min-width: 651px) {
-  #section-principale #ensemble-vignette-article {
+  #bloc-page #section-principale #ensemble-vignette-article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-  #section-principale #ensemble-vignette-article figure {
+  #bloc-page #section-principale #ensemble-vignette-article figure {
     width: 37%;
   }
 }
-
 @media screen and (min-width: 700px) {
-  #section-principale h2 {
+  #bloc-page #section-principale h2 {
     width: 85%;
     margin-left: 9.5%;
   }
 }
-
 @media screen and (min-width: 800px) {
-  #section-principale h2 {
+  #bloc-page #section-principale h2 {
     width: 85%;
     margin-left: 10.5%;
   }
