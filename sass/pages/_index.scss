@@ -139,6 +139,12 @@ body{
                 @include shadow-hover;
             }
         }
+        .presentation-entreprise{
+            text-align: justify;
+            font-weight: 200;
+            font-style: oblique;
+            font-size: .8rem;
+        }
     }
     #section-nav{
         font-family: $font-main;
