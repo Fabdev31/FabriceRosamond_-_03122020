@@ -60,10 +60,10 @@ body{
             color: $colour-tertiary;
             position: fixed;
             top: 10%;
-            right: 10%;
+            right: 40%;
             z-index: -1;
-            width: 80%;
-            height: 300px;
+            width: 20%;
+            height: 100px;
             animation:loader1 1s 2 both;
         }
         &__loader2{
@@ -74,17 +74,16 @@ body{
             border:$colour-secondary dashed 10px;
             color: $colour-primary;
             position: fixed;
-            top: 14%;
-            right: 20%;
+            top: 12%;
+            right: 44.5%;
             z-index: -1;
-            width: 60%;
-            height: 230px;
+            width: 10%;
+            height: 50px;
             animation:loader-2 1s 250ms 2 both;
         }
     }
 }
-
-#bloc-page{
+#bloc{
     animation: apparition-bloc 2s backwards;
     font-size: 100%;
 }
