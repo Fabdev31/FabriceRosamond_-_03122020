@@ -61,11 +61,11 @@ button {
   border-style: none;
   margin-bottom: 10%;
   box-shadow: 0px 2px 2px black;
-  font-size: 1rem;
+  font-size: 12px;
 }
 @media screen and (min-width: 1025px) {
   button {
-    font-size: 100%;
+    font-size: 14px;
   }
 }
 
@@ -150,7 +150,7 @@ body .load__loader2 {
 
 #bloc {
   animation: apparition-bloc 2s backwards;
-  font-size: 100%;
+  font-size: 14px;
 }
 
 img {
@@ -191,13 +191,13 @@ header .logo-header {
 }
 @media screen and (min-width: 1025px) {
   #section-recherche .section-recherche {
-    font-size: 100%;
+    font-size: 14px;
   }
 }
 #section-recherche h1 {
   width: 80%;
   margin-left: 10%;
-  font-weight: 500;
+  font-weight: 800;
 }
 #section-recherche .sous-titre {
   width: 90%;
@@ -237,8 +237,8 @@ header .logo-header {
   position: relative;
   margin-left: 10%;
   margin-bottom: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   background-color: #f6f6f6;
   box-shadow: 0px 7px 5px #d2d2d2;
   font-size: 1rem;
@@ -279,6 +279,10 @@ header .logo-header {
 }
 
 #section-principale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   font-family: "Roboto";
   font-weight: 900;
   background-color: #f6f6f6;
@@ -286,8 +290,19 @@ header .logo-header {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-#section-principale #ensemble-vignette-article h2 {
-  margin-left: 8%;
+#section-principale h2 {
+  width: 70%;
+}
+@media screen and (min-width: 501px) {
+  #section-principale h2 {
+    width: 80%;
+  }
+}
+#section-principale #ensemble-vignette-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
 }
 #section-principale #ensemble-vignette-article .vignette-article-differentes {
   background-color: #fff;
@@ -313,7 +328,7 @@ header .logo-header {
 }
 #section-principale #ensemble-vignette-article figure figcaption {
   margin-left: 8%;
-  width: 85%;
+  width: 88%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -332,7 +347,7 @@ header .logo-header {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -444,12 +459,12 @@ header .icone-fleche {
 }
 @media screen and (min-width: 651px) {
   #bloc-page {
-    font-size: 110%;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1025px) {
   #bloc-page {
-    font-size: 140%;
+    font-size: 14px;
   }
 }
 
@@ -562,7 +577,7 @@ header .icone-fleche {
   }
 }
 #section-menu .ensemble-vignettes-menu__entrees {
-  animation: menu-apparitions 2000ms 1s backwards;
+  animation: menu-apparitions 2000ms backwards;
 }
 @media screen and (min-width: 651px) {
   #section-menu .ensemble-vignettes-menu__entrees {
@@ -756,11 +771,11 @@ button {
   border-style: none;
   margin-bottom: 10%;
   box-shadow: 0px 2px 2px black;
-  font-size: 1rem;
+  font-size: 12px;
 }
 @media screen and (min-width: 1025px) {
   button {
-    font-size: 100%;
+    font-size: 14px;
   }
 }
 

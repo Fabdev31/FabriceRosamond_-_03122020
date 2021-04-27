@@ -36,3 +36,9 @@
     }
     
 }
+@mixin mobile_2 {
+    @media screen and (min-width:map-get($breakpoints, mobile2 )){
+        @content;
+    }
+    
+}

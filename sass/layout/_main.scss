@@ -10,10 +10,10 @@
 #bloc-page{
     height: 1000px;
     @include tablette1{
-        font-size: 110%;
+        font-size: 12px;
     }
     @include desktop{
-        font-size: 140%;
+        font-size: 14px;
     }
 }
 #presentation-restaurant{
@@ -114,7 +114,7 @@
             width: 70%;
         }
         &__entrees{
-            animation: menu-apparitions 2000ms 1s backwards;
+            animation: menu-apparitions 2000ms  backwards;
             @include tablette1{
                 width:80%;
             }

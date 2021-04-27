@@ -85,7 +85,7 @@ body{
 }
 #bloc{
     animation: apparition-bloc 2s backwards;
-    font-size: 100%;
+    font-size: 14px;
 }
     img{
         width: 100%;
@@ -119,13 +119,13 @@ body{
             font-size: map-get($font-size,vignette-menu-nav);
             font-weight:500;
             @include desktop{
-                font-size: 100%;
+                font-size: 14px;
             }
         }
         h1{
             width: 80%;
             margin-left: 10%;
-            font-weight: 500;
+            font-weight: 800;
         }
         .sous-titre{
             width: 90%;
@@ -165,8 +165,8 @@ body{
                 position: relative;
                 margin-left: 10%;
                 margin-bottom: 5%;
-                padding-top: 3%;
-                padding-bottom: 3%;
+                padding-top: 1%;
+                padding-bottom: 1%;
                 @include backgroundmaincolor;
                 @include shadow-main;
                 font-size: map-get($font-size,vignette-menu-nav);
@@ -205,16 +205,28 @@ body{
     }
 
     #section-principale{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         font-family: $font-main;
         font-weight: $font-weight;
         @include backgroundmaincolor;
         margin-top: map-get($margin-top, section);
         padding-top: 5%;
         padding-bottom: 5%;
-        #ensemble-vignette-article{
-            h2{
-                margin-left: map-get($margin-left,h2);
+        h2{
+            width: 70%;
+            @include mobile_2{
+            width:80%;
             }
+        }
+        #ensemble-vignette-article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95%;
+
             .vignette-article-differentes{
                 @include backgroundmaincolor($colour-white);
                 border-radius: map-get($border-radius , vignette-article-differentes );
@@ -238,7 +250,7 @@ body{
                 @include shadow-main;
                 figcaption{
                     margin-left: map-get($margin-left, h2 );
-                    width: 85%;
+                    width: 88%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -255,7 +267,7 @@ body{
                             background: linear-gradient($colour-primary, $colour-secondary);
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
-                            font-size: 1.3rem;
+                            font-size: 1.2rem;
                             cursor: pointer;
                             position: absolute;
                             top:0;
