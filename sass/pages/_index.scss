@@ -110,7 +110,7 @@ body{
         text-align: center;
         padding-bottom: 8%;
         @include desktop{
-            font-size: 130%;
+            padding-bottom: 0%;
         }
         .section-recherche{
             @include backgroundmaincolor($color-deep-grey);
@@ -150,11 +150,20 @@ body{
         font-family: $font-main;
         font-weight:$font-weight;
         margin-top: map-get($margin-top,section);
+        @include desktop{
+            margin-top: 3%;
+        }
         h2{
             margin-left: map-get($margin-left,h2);
             width: 90%;
+            @include desktop{
+                margin-left: 4%;
+            }
         }
         .ensemble-vignettes-nav{
+            @include desktop{
+                display: flex;
+            }
             .vignette-menu-nav{
                 display: flex;
                 flex-direction: row;
@@ -172,11 +181,14 @@ body{
                 font-size: map-get($font-size,vignette-menu-nav);
                 @include tablette1{
                     width: 50%;
-                    font-size: 110%;
+                    font-size: 14px;
                 }
                 @include desktop{
-                    width: 50%;
-                    font-size: 120%;
+                    width: 25%;
+                    font-size: 14px;
+                    margin-left: 5%;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
                 }
                 &:hover{
                     background-color: lighten($color: $colour-primary, $amount: 30%);
@@ -198,7 +210,7 @@ body{
                     color: grey;
                 }
                 .texte-vignette{
-                    margin-left: map-get($margin-left, texte-vignette)
+                    margin-left: 5%;
                 }
             }
         }
@@ -215,18 +227,52 @@ body{
         margin-top: map-get($margin-top, section);
         padding-top: 5%;
         padding-bottom: 5%;
+        position: relative;
+        @include tablette1{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
         h2{
-            width: 70%;
-            @include mobile_2{
-            width:80%;
+            position: absolute;
+            right: 0;
+            top: 6px;
+            width: 87%;
+            @include mobile1 {
+                width:91%
             }
+            @include mobile_2{
+            width:92%;
+            top:25px;
+            }
+            @include tablette1{
+                top: 40px;
+                width: 96%;
+            }
+            @include tablette3{
+                top: 40px;
+            }
+            @include desktop{
+                top:30px;
+            }
+
         }
         #ensemble-vignette-article{
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 95%;
-
+            width: 100%;
+            margin-top: 8%;
+            @include tablette1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+            }
+            @include desktop{
+                margin-top: 15px;
+            }
             .vignette-article-differentes{
                 @include backgroundmaincolor($colour-white);
                 border-radius: map-get($border-radius , vignette-article-differentes );
@@ -248,6 +294,10 @@ body{
                 @include backgroundmaincolor($colour-white);
                 border-radius: map-get($border-radius, figure );
                 @include shadow-main;
+                @include tablette1{
+                        width: 45%;
+                        margin:14px;
+                }
                 figcaption{
                     margin-left: map-get($margin-left, h2 );
                     width: 88%;
@@ -310,46 +360,6 @@ body{
 
         }        
     }
-    #section-principale{
-        @include tablette1{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            h2{
-                margin-left: 8.5%;
-                width: 90%;
-            }
-        }
-            #ensemble-vignette-article{
-                @include tablette1{
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    figure{
-                        width: 37%;
-                    }
-                }
-            }
-    }
-    #section-principale{
-        @include tablette2{
-            h2{
-                width: 85%;
-                margin-left: 9.5%;
-            }
-        }
-    }
-    #section-principale{
-        @include tablette3{
-            h2{
-                width: 85%;
-                margin-left: 10.5%;
-            }
-        }
-    }
-
-
     
     
     

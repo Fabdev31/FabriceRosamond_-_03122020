@@ -40,5 +40,10 @@
     @media screen and (min-width:map-get($breakpoints, mobile2 )){
         @content;
     }
+}
+@mixin mobile1 {
+    @media screen and (min-width:map-get($breakpoints, mobile1)){
+        @content;
+    }
     
 }
