@@ -317,6 +317,11 @@ header .logo-header {
     align-items: flex-start;
   }
 }
+@media screen and (min-width: 651px) and (min-width: 1025px) {
+  #section-principale {
+    margin-top: 0px;
+  }
+}
 #section-principale h2 {
   position: absolute;
   right: 0;
