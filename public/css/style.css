@@ -500,7 +500,7 @@ header .icone-fleche {
   }
 }
 #bloc-page {
-  height: 1000px;
+  width: 100%;
 }
 @media screen and (min-width: 651px) {
   #bloc-page {
