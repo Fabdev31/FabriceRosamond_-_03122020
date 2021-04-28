@@ -55,18 +55,23 @@ button {
   border-radius: 25px;
   background-color: #9356DC;
   background: linear-gradient(#FF79DA, #9356DC);
-  padding: 2.5%;
+  padding: 2%;
   color: #fff;
   font-family: "Roboto";
   border-style: none;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   box-shadow: 0px 2px 2px black;
   font-size: 12px;
+}
+@media screen and (min-width: 651px) {
+  button {
+    padding: 2%;
+  }
 }
 @media screen and (min-width: 1025px) {
   button {
     font-size: 14px;
-    padding: 1.5%;
+    padding: 1%;
   }
 }
 
@@ -537,7 +542,7 @@ header .icone-fleche {
 }
 @media screen and (min-width: 1025px) {
   #presentation-restaurant .presentation-restaurant {
-    padding-bottom: 5%;
+    padding-bottom: 2%;
   }
 }
 #presentation-restaurant .presentation-restaurant h1 {
@@ -594,50 +599,101 @@ header .icone-fleche {
   padding-top: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   align-items: center;
 }
 #section-menu .ensemble-vignettes-menu {
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
   margin-top: 16%;
 }
 @media screen and (min-width: 651px) {
   #section-menu .ensemble-vignettes-menu {
     align-items: center;
-    width: 85%;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1025px) {
   #section-menu .ensemble-vignettes-menu {
-    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 5%;
   }
 }
 #section-menu .ensemble-vignettes-menu__entrees {
-  animation: menu-apparitions 2000ms backwards;
+  width: 95%;
+  animation: menu-apparitions 2000ms 1s backwards;
 }
-@media screen and (min-width: 651px) {
+@media screen and (min-width: 400px) {
   #section-menu .ensemble-vignettes-menu__entrees {
     width: 80%;
   }
 }
-#section-menu .ensemble-vignettes-menu__plats {
-  animation: menu-apparitions 500ms 2000ms backwards;
+@media screen and (min-width: 501px) {
+  #section-menu .ensemble-vignettes-menu__entrees {
+    width: 65%;
+  }
 }
 @media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu__entrees {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu__entrees {
+    width: 30%;
+  }
+}
+#section-menu .ensemble-vignettes-menu__plats {
+  width: 95%;
+  animation: menu-apparitions 500ms 1700ms backwards;
+}
+@media screen and (min-width: 400px) {
   #section-menu .ensemble-vignettes-menu__plats {
     width: 80%;
   }
 }
+@media screen and (min-width: 501px) {
+  #section-menu .ensemble-vignettes-menu__plats {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu__plats {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu__plats {
+    width: 32%;
+  }
+}
 #section-menu .ensemble-vignettes-menu__desserts {
-  animation: menu-apparitions 500ms 2500ms backwards;
+  width: 95%;
+  animation: menu-apparitions 500ms 2200ms backwards;
+}
+@media screen and (min-width: 400px) {
+  #section-menu .ensemble-vignettes-menu__desserts {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 501px) {
+  #section-menu .ensemble-vignettes-menu__desserts {
+    width: 65%;
+  }
 }
 @media screen and (min-width: 651px) {
   #section-menu .ensemble-vignettes-menu__desserts {
-    width: 80%;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu__desserts {
+    width: 30%;
   }
 }
 #section-menu .ensemble-vignettes-menu .positionnement-titre-article {
@@ -658,6 +714,12 @@ header .icone-fleche {
   width: 100%;
   cursor: pointer;
   overflow-x: hidden;
+  font-size: 12px;
+}
+@media screen and (min-width: 651px) {
+  #section-menu .ensemble-vignettes-menu .vignettes-menu {
+    font-size: 13px;
+  }
 }
 @media screen and (min-width: 1025px) {
   #section-menu .ensemble-vignettes-menu .vignettes-menu:hover > .vignettes-menu-form-cercle {
@@ -709,8 +771,6 @@ header .icone-fleche {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  /*flex-direction: row;
-  flex-wrap: wrap;*/
   justify-content: space-between;
   width: 100%;
 }
@@ -720,6 +780,7 @@ header .icone-fleche {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 0%;
 }
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text .description-menu {
   display: flex;
@@ -737,15 +798,20 @@ header .icone-fleche {
 #section-menu .ensemble-vignettes-menu .vignettes-menu .vignettes-menu-text .description-menu .dernier-element-vignette {
   margin-right: 5%;
 }
-#section-menu .ensemble-vignettes-menu .positionnement-bouton-menu {
+#section-menu .positionnement-bouton-menu {
   text-align: center;
 }
-#section-menu .ensemble-vignettes-menu .positionnement-bouton-menu button {
+#section-menu .positionnement-bouton-menu button {
   box-shadow: 0px 7px 5px #d2d2d2;
 }
-#section-menu .ensemble-vignettes-menu .positionnement-bouton-menu button:hover {
+#section-menu .positionnement-bouton-menu button:hover {
   filter: brightness(1.2);
   box-shadow: 0px 10px 10px #6c6c6c;
+}
+@media screen and (min-width: 1025px) {
+  #section-menu .positionnement-bouton-menu {
+    margin: 2%;
+  }
 }
 
 footer {
@@ -805,18 +871,23 @@ button {
   border-radius: 25px;
   background-color: #9356DC;
   background: linear-gradient(#FF79DA, #9356DC);
-  padding: 2.5%;
+  padding: 2%;
   color: #fff;
   font-family: "Roboto";
   border-style: none;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   box-shadow: 0px 2px 2px black;
   font-size: 12px;
+}
+@media screen and (min-width: 651px) {
+  button {
+    padding: 2%;
+  }
 }
 @media screen and (min-width: 1025px) {
   button {
     font-size: 14px;
-    padding: 1.5%;
+    padding: 1%;
   }
 }
 

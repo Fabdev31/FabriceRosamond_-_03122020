@@ -42,7 +42,7 @@
             padding-top: 5%;
             margin-top: 11%;
             @include desktop{
-                padding-bottom: 5%;
+                padding-bottom: 2%;
             }
             h1{
                 margin-left: 5%;
@@ -97,38 +97,71 @@
     padding-top: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     align-items: center;
     .ensemble-vignettes-menu{
-        width: 95%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-content: center;
+        align-items: center;
         margin-top: 16%;
         @include tablette1{
             align-items: center;
-            width: 85%;
+            font-size: 14px;
         }
         @include desktop{
-            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 5%;
         }
         &__entrees{
-            animation: menu-apparitions 2000ms  backwards;
-            @include tablette1{
+            width: 95%;
+            animation: menu-apparitions 2000ms  1s backwards;
+            @include mobile1{
                 width:80%;
+            }
+            @include mobile_2{
+                width: 65%;
+            }
+            @include tablette1{
+                width:50%;
+            }
+            @include desktop{
+                width: 30%;
             }
         }
         &__plats{
-            animation: menu-apparitions 500ms 2000ms backwards;
-            @include tablette1{
+            width: 95%;
+            animation: menu-apparitions 500ms 1700ms backwards;
+            @include mobile1{
                 width:80%;
+            }
+            @include mobile_2{
+                width: 65%;
+            }
+            @include tablette1{
+                width:50%;
+            }
+            @include desktop{
+                width: 32%;
             }
         }
         &__desserts{
-            animation: menu-apparitions 500ms 2500ms backwards;
-            @include tablette1{
+            width: 95%;
+            animation: menu-apparitions 500ms 2200ms backwards;
+            @include mobile1{
                 width:80%;
+            }
+            @include mobile_2{
+                width: 65%;
+            }
+            @include tablette1{
+                width:50%;
+            }
+            @include desktop{
+                width: 30%;
             }
         }
         .positionnement-titre-article{
@@ -149,6 +182,10 @@
             width: 100%;
             cursor: pointer;
             overflow-x: hidden;
+            font-size: 12px;
+            @include tablette1{
+                font-size: 13px;
+            }
             @include desktop{
             &:hover > .vignettes-menu-form-cercle{
                 transform-origin: right;
@@ -199,8 +236,6 @@
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
-                /*flex-direction: row;
-                flex-wrap: wrap;*/
                 justify-content:space-between;
                 width: 100%;
                 h3{
@@ -209,6 +244,7 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    margin-bottom: 0%;
                 }
                 .description-menu{
                     display: flex;
@@ -227,18 +263,22 @@
                     }
                 }
             }
-        }       
-        .positionnement-bouton-menu{
-                text-align: center;
-                button{
-                    @include shadow-main;
-                    &:hover{
-                        filter:brightness(1.2);
-                        @include shadow-hover;
-                    } 
-                }
         }
-    }  
+    }    
+    .positionnement-bouton-menu{
+        text-align: center;
+        button{
+            @include shadow-main;
+            &:hover{
+                filter:brightness(1.2);
+                @include shadow-hover;
+            } 
+        }
+        @include desktop{
+            margin: 2%;
+        }
+    }
+      
 }
 
     
