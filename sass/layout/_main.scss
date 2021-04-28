@@ -267,7 +267,10 @@
     }    
     .positionnement-bouton-menu{
         text-align: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
         button{
+            padding: 10%;
             @include shadow-main;
             &:hover{
                 filter:brightness(1.2);
