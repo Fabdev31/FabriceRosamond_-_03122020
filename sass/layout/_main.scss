@@ -116,6 +116,7 @@
             align-items: flex-start;
             margin-top: 5%;
         }
+        /*BEM*/
         &__entrees{
             width: 95%;
             animation: menu-apparitions 2000ms  1s backwards;
@@ -186,6 +187,7 @@
             @include tablette1{
                 font-size: 13px;
             }
+            /*combinateur parent enfant*/
             @include desktop{
             &:hover > .vignettes-menu-form-cercle{
                 transform-origin: right;
@@ -193,6 +195,7 @@
                 transition:  all 500ms;
                 width: 20%;
             }
+            /*combinateur descendant*/
             &:hover .icone-validation{
                 transform: rotate(0deg);
                 transition: transform 500ms;

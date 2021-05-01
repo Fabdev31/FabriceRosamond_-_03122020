@@ -608,6 +608,7 @@ header .icone-fleche {
   align-content: center;
   align-items: center;
   margin-top: 16%;
+  /*BEM*/
 }
 @media screen and (min-width: 651px) {
   #section-menu .ensemble-vignettes-menu {
@@ -715,6 +716,7 @@ header .icone-fleche {
   cursor: pointer;
   overflow-x: hidden;
   font-size: 12px;
+  /*combinateur parent enfant*/
 }
 @media screen and (min-width: 651px) {
   #section-menu .ensemble-vignettes-menu .vignettes-menu {
@@ -722,6 +724,9 @@ header .icone-fleche {
   }
 }
 @media screen and (min-width: 1025px) {
+  #section-menu .ensemble-vignettes-menu .vignettes-menu {
+    /*combinateur descendant*/
+  }
   #section-menu .ensemble-vignettes-menu .vignettes-menu:hover > .vignettes-menu-form-cercle {
     transform-origin: right;
     transform: translateX(0%);
